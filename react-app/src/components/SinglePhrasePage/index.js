@@ -6,10 +6,10 @@ import { useParams} from "react-router-dom";
 const SinglePhrasePage = () => {
     const dispatch = useDispatch();
     const {phraseId} = useParams();
-    console.log(phraseId)
+    // console.log(phraseId)
 
     const phraseObj = useSelector(state => state.phrases)
-    console.log(phraseObj)
+    // console.log(phraseObj)
 
     // const phrase = Object.values(phraseObj)
     // console.log(phrase, "fdsjkgfbdsgrs")
