@@ -10,6 +10,7 @@ import User from './components/User';
 import { authenticate } from './store/session';
 import AllPhrases from './components/AllPhrases';
 import SinglePhrasePage from './components/SinglePhrasePage';
+import CreateNewPhrase from './components/CreateNewPhrase';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -49,6 +50,9 @@ function App() {
         {/* <Route path='/phrases' exact={true}>
 
         </Route> */}
+        <Route path='/phrases/new' exact={true}>
+          <CreateNewPhrase />
+        </Route>
         <Route path='/phrases/:phraseId' exact={true}>
           <SinglePhrasePage />
         </Route>

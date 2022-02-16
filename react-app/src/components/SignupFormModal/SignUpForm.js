@@ -24,6 +24,7 @@ const SignUpForm = () => {
         setErrors(data)
       }
     }
+
   };
 
   const demoLogin = (e) => {

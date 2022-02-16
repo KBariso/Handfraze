@@ -22,5 +22,6 @@ class Phrase(db.Model):
             "title": self.title,
             "description": self.description,
             "media_url": self.media_url,
-            "user_id": self.user_id
+            "user_id": self.user_id,
+            "category_id": self.category_id
         }

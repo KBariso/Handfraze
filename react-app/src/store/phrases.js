@@ -1,5 +1,6 @@
 const GET_ALL_PHRASES = "phrases/GET_ALL_PHRASES"
 const GET_ONE_PHRASE = "phrases/GET_ONE_PHRASE"
+const CREATE_NEW_PHRASE = "phrases/CREATE_NEW_PHRASE"
 
 
 const allPhrases = (phrases) => ({
@@ -31,6 +32,24 @@ export const getOnePhrase = (phraseId) => async (dispatch) => {
 }
 
 
+const newPhrase = (phrase) => ({
+    type: CREATE_NEW_PHRASE,
+    phrase
+})
+
+export const createPhrase = (phrase) => async (dispatch) => {
+    const res = await fetch(`/api/phrases/new`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        'Accept': 'application/json',
+        body: JSON.stringify(phrase),
+    });
+    if (res.ok) {
+        const phrase = await res.json();
+        dispatch(newPhrase(phrase));
+        return phrase
+    }
+}
 
 
 
@@ -48,6 +67,8 @@ const phraseReducer = (state = initialState, action) => {
                 ...state,
                 ...action.phrase
             }
+        case CREATE_NEW_PHRASE:
+            return {...state, [action.phrase.id]: action.phrase}
         default: {
             return state;
         }
