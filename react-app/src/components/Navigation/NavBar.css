@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+}
+
+.SignupLogout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: red;
+}
+
+.Login {
+    display: flex;
+    justify-self: flex-end;
+}
