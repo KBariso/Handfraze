@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import LoginForm from './components/auth/LoginForm';
-import SignUpForm from './components/auth/SignUpForm';
+import LoginForm from './components/LoginFormModal/LoginForm';
+import SignUpForm from './components/SignupFormModal/SignUpForm';
 import NavBar from './components/Navigation/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
@@ -30,10 +30,10 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route path='/login' exact={true}>
+        {/* <Route path='/login' exact={true}>
           <LoginForm />
-        </Route>
-        <Route path='/sign-up' exact={true}>
+        </Route> */}
+        {/* <Route path='/sign-up' exact={true}>
           <SignUpForm />
         </Route>
         <ProtectedRoute path='/users' exact={true} >
@@ -41,13 +41,14 @@ function App() {
         </ProtectedRoute>
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
-        </ProtectedRoute>
-        <ProtectedRoute path='/' exact={true} >
+        </ProtectedRoute> */}
+        <Route path='/' exact={true} >
           <h1>My Home Page</h1>
-        </ProtectedRoute>
-        <Route path='/phrases' exact={true}>
           <AllPhrases />
         </Route>
+        {/* <Route path='/phrases' exact={true}>
+
+        </Route> */}
         <Route path='/phrases/:phraseId' exact={true}>
           <SinglePhrasePage />
         </Route>
