@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../store/session';
+import { useHistory } from "react-router-dom";
+import { login } from '../../store/session';
+import './SignUpForm.css';
 
 const SignUpForm = () => {
   const [errors, setErrors] = useState([]);
@@ -11,6 +14,7 @@ const SignUpForm = () => {
   const [repeatPassword, setRepeatPassword] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const onSignUp = async (e) => {
     e.preventDefault();
@@ -21,6 +25,14 @@ const SignUpForm = () => {
       }
     }
   };
+
+  const demoLogin = (e) => {
+    e.preventDefault();
+    const email = "demo@aa.io";
+    const password = "password";
+    dispatch(login(email, password));
+    history.push("/")
+  }
 
   const updateUsername = (e) => {
     setUsername(e.target.value);
@@ -43,42 +55,46 @@ const SignUpForm = () => {
   }
 
   return (
-    <form onSubmit={onSignUp}>
+    <form className='loginForm' onSubmit={onSignUp}>
       <div>
         {errors.map((error, ind) => (
           <div key={ind}>{error}</div>
         ))}
       </div>
-      <div>
-        <label>User Name</label>
+      <div className="input-parent">
+        <label className='loginLabel'>User Name</label>
         <input
+        className='inputLogin'
           type='text'
           name='username'
           onChange={updateUsername}
           value={username}
         ></input>
       </div>
-      <div>
+      <div className="input-parent">
         <label>Email</label>
         <input
-          type='text'
+         className='inputLogin'
+          type='email'
           name='email'
           onChange={updateEmail}
           value={email}
         ></input>
       </div>
-      <div>
+      <div className="input-parent">
         <label>Password</label>
         <input
+        className='inputLogin'
           type='password'
           name='password'
           onChange={updatePassword}
           value={password}
         ></input>
       </div>
-      <div>
+      <div className="input-parent">
         <label>Repeat Password</label>
         <input
+        className='inputLogin'
           type='password'
           name='repeat_password'
           onChange={updateRepeatPassword}
@@ -86,7 +102,10 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
-      <button type='submit'>Sign Up</button>
+      <button className='buttonLogin'type='submit'>Sign Up</button>
+       <button className='demoButtonLogin'type="submit" onClick={demoLogin}>
+                    User Demo Login
+                </button>
     </form>
   );
 };
