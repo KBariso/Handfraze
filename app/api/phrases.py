@@ -34,10 +34,10 @@ def get_all_phrases():
 def phrase_form_submit():
     form = NewPhrase()
     req_body = request.json
-    print(req_body)
+    # print(req_body)
     form['csrf_token'].data = request.cookies['csrf_token']
 
-    print("I AM HERE!!!")
+    # print("I AM HERE!!!")
 
     if form.validate_on_submit():
         print("IN THE IF STATEMENT!!!")
@@ -56,3 +56,34 @@ def phrase_form_submit():
     else:
         print(form.errors)
         return {'error':"Bad Data"}
+
+
+# ---------------EDIT A PHRASE -------------------
+@phrases.route('/<int:id>/edit', methods=["PUT"])
+def edit_phrase(id):
+    print("OVER HERE!!!!")
+    form = NewPhrase()
+    phrase = Phrase.query.get(id)
+    req_body = request.json
+
+    form['csrf_token'].data = request.cookies['csrf_token']
+    if form.validate_on_submit():
+        phrase.title = form.data["title"]
+        phrase.description = form.data["description"]
+        phrase.media_url = form.data["media_url"]
+        phrase.category_id = form.data["category_id"]
+
+        db.session.commit()
+        return phrase.to_dict()
+    print(form.errors)
+    return {'error': "Bad Data Form"}
+
+
+# ---------------DELETE A PHRASE -------------------
+@phrases.route('/<int:id>', methods=["DELETE"])
+def delete_phrase(id):
+    deletePhrase = Phrase.query.filter(Phrase.id == id).first()
+    db.session.delete(deletePhrase)
+    db.session.commit()
+    
+    return flask.redirect("/")
