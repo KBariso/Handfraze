@@ -40,6 +40,7 @@ def phrase_form_submit():
     print("I AM HERE!!!")
 
     if form.validate_on_submit():
+        print("IN THE IF STATEMENT!!!")
         data = form.data
         new_phrase = Phrase(title = data["title"],
                             description = data["description"],
@@ -48,9 +49,10 @@ def phrase_form_submit():
                             category_id = req_body["category_id"]
                             )
         db.session.add(new_phrase)
-
         db.session.commit()
+        print(new_phrase.to_dict(), "NEW PHRASE")
         return new_phrase.to_dict()
 
     else:
-        return "Bad Data"
+        print(form.errors)
+        return {'error':"Bad Data"}

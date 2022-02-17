@@ -11,25 +11,25 @@ const CreateNewPhrase = () => {
   const userId = user;
 //   console.log(userId)
 
-//   const categoriesObj = useSelector((state) => state.categories);
-//   console.log(categoriesObj);
-//   const categories = Object.values(categoriesObj);
+  const categoriesObj = useSelector((state) => state.categories);
+  console.log(categoriesObj);
+  const categories = Object.values(categoriesObj);
 //   console.log(categories);
 
-//   useEffect(() => {
-//     dispatch(getAllCategories());
-//   }, [dispatch]);
+  useEffect(() => {
+    dispatch(getAllCategories());
+  }, [dispatch]);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [media, setMedia] = useState("");
-//   const [category, setCategory] = useState([]);
+  const [category, setCategory] = useState([]);
   const [errors, setErrors] = useState([]);
 
   const updateTitle = (e) => setTitle(e.target.value);
   const updateDescription = (e) => setDescription(e.target.value);
   const updateMedia = (e) => setMedia(e.target.value);
-  // const updateCategory = (e) => setCategory(e.target.value)
+  const updateCategory = (e) => setCategory(e.target.value)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -39,13 +39,13 @@ const CreateNewPhrase = () => {
         title,
         description,
         media_url:media,
-        category_id: 1
+        category_id: category
     };
 
     let createdPhrase = await dispatch(createPhrase(payload))
-    // setTitle("")
-    // setDescription("")
-    // setMedia("")
+    setTitle("")
+    setDescription("")
+    setMedia("")
       if (createdPhrase) {
         history.push(`/`);
       }
@@ -81,13 +81,14 @@ const CreateNewPhrase = () => {
           value={media}
           onChange={updateMedia}
         />
-        {/* <select >
-                    <option value="A">{categories[0].title}</option>
-                    <option value="B">{categories[1].title}</option>
-                    <option value="C">{categories[2].title}</option>
-                    <option value="C">{categories[3].title}</option>
-                    <option value="C">{categories[4].title}</option>
-                </select> */}
+        {categoriesObj &&
+                <select onChange={updateCategory} >
+                    {categories?.map((category) => {
+                        return <option value={category.id}>{category.title}</option>
+                    })}
+                </select>
+        }
+
 
         <button type="submit">Submit</button>
       </form>
