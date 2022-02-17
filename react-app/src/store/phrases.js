@@ -41,7 +41,6 @@ export const createPhrase = (phrase) => async (dispatch) => {
     const res = await fetch(`/api/phrases/new`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        'Accept': 'application/json',
         body: JSON.stringify(phrase),
     });
     if (res.ok) {

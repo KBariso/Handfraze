@@ -8,7 +8,7 @@ class Phrase(db.Model):
     title = db.Column(db.String(100), nullable=False)
     description = db.Column(db.String(255), nullable=False)
     media_url = db.Column(db.String(255))
-    category_id = db.Column(db.Integer, db.ForeignKey("categories.id"), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey("categories.id"))
 
     user = db.relationship("User", back_populates="phrases")
     categories = db.relationship("Category", back_populates="phrases")

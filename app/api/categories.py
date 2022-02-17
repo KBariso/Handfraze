@@ -7,9 +7,7 @@ categories = Blueprint(
 )
 
 
-@categories.route('/', methods=['GET'], strict_slashes=False)
+@categories.route('/', methods=['GET'])
 def get_all_categories():
-    # phrases = Phrase.query.all()
-    categories = [category.to_dict() for category in Category.query.all() ]
-    # return {'phrases': [phrase.to_dict() for phrase in phrases]}
+    categories = [category.to_dict() for category in Category.query.all()]
     return jsonify(categories)

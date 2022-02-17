@@ -25,9 +25,9 @@ const categoryReducer = (state = initialState, action) => {
                 newState[category.id] = category;
             })
             return {...state, ...newState}
-        default: {
+        default:
             return state;
-        }
+
     }
 }
 

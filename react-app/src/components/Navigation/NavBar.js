@@ -21,6 +21,11 @@ const NavBar = () => {
             <h1>Handfraze</h1>
             </NavLink>
           </div>
+          <div>
+          <NavLink to='/phrases/new' exact={true} activeClassName='active'>
+          <h1>CREATE</h1>
+            </NavLink>
+          </div>
           <div className='LogoutButtonContainer'>
             <LogoutButton />
           </div>
