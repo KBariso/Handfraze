@@ -1,6 +1,5 @@
 const GET_ALL_PHRASES = "phrases/GET_ALL_PHRASES"
 const GET_ONE_PHRASE = "phrases/GET_ONE_PHRASE"
-const CREATE_NEW_PHRASE = "phrases/CREATE_NEW_PHRASE"
 
 
 const allPhrases = (phrases) => ({
@@ -31,6 +30,8 @@ export const getOnePhrase = (phraseId) => async (dispatch) => {
     }
 }
 
+
+const CREATE_NEW_PHRASE = "phrases/CREATE_NEW_PHRASE"
 
 const newPhrase = (phrase) => ({
     type: CREATE_NEW_PHRASE,

@@ -38,8 +38,6 @@ def phrase_form_submit():
     form['csrf_token'].data = request.cookies['csrf_token']
 
     print("I AM HERE!!!")
-    # new_phrase = form['phrase'].data
-
 
     if form.validate_on_submit():
         data = form.data

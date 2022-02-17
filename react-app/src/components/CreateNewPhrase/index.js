@@ -33,7 +33,6 @@ const CreateNewPhrase = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (errors.length > 0) return;
 
     const payload = {
         user_id:userId,
@@ -43,17 +42,6 @@ const CreateNewPhrase = () => {
         category_id: 1
     };
 
-    // if (!title) {
-    //   setErrors(["Please enter a title"]);
-    // } else if (title.length < 2) {
-    //   setErrors(["Your title length is too short"]);
-    // } else if (!description) {
-    //   setErrors(["Please enter a description"]);
-    // } else if (description.length <= 3) {
-    //   setErrors(["Your description length is too short"]);
-    // } else {
-    //   setErrors([]);
-
     let createdPhrase = await dispatch(createPhrase(payload))
     // setTitle("")
     // setDescription("")
@@ -61,7 +49,6 @@ const CreateNewPhrase = () => {
       if (createdPhrase) {
         history.push(`/`);
       }
-    // }
   };
 //   if (!user) return <Redirect to="/" />;
 
