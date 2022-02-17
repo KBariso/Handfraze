@@ -11,6 +11,7 @@ import { authenticate } from './store/session';
 import AllPhrases from './components/AllPhrases';
 import SinglePhrasePage from './components/SinglePhrasePage';
 import CreateNewPhrase from './components/CreateNewPhrase';
+import EditPhrase from './components/EditPhrase';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -37,6 +38,9 @@ function App() {
         </Route>
         <Route path='/phrases/new' exact={true}>
           <CreateNewPhrase />
+        </Route>
+        <Route path='/phrases/:phraseId/edit' exact={true}>
+          <EditPhrase />
         </Route>
         <Route path='/phrases/:phraseId' exact={true}>
           <SinglePhrasePage />

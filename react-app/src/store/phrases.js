@@ -1,5 +1,7 @@
 const GET_ALL_PHRASES = "phrases/GET_ALL_PHRASES"
 const GET_ONE_PHRASE = "phrases/GET_ONE_PHRASE"
+const CREATE_NEW_PHRASE = "phrases/CREATE_NEW_PHRASE"
+const EDIT_ONE_PHRASE = "phrases/EDIT_ONE_PHRASE"
 
 
 const allPhrases = (phrases) => ({
@@ -31,7 +33,6 @@ export const getOnePhrase = (phraseId) => async (dispatch) => {
 }
 
 
-const CREATE_NEW_PHRASE = "phrases/CREATE_NEW_PHRASE"
 
 const newPhrase = (phrase) => ({
     type: CREATE_NEW_PHRASE,
@@ -51,6 +52,22 @@ export const createPhrase = (phrase) => async (dispatch) => {
     }
 }
 
+const editPhrase = (phrase) => ({
+    type: EDIT_ONE_PHRASE,
+    phrase
+})
+
+export const editOnePhrase = ({phraseId, title, description, media_url, category_id}) => async (dispatch) => {
+    const res = await fetch(`/api/phrases/${phraseId}/edit`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({phraseId, title, description, media_url, category_id})
+    })
+    if (res.ok) {
+        const editedPhrase = await res.json();
+        dispatch(editPhrase(editedPhrase));
+    }
+}
 
 
 const initialState = {};
@@ -68,6 +85,8 @@ const phraseReducer = (state = initialState, action) => {
                 ...action.phrase
             }
         case CREATE_NEW_PHRASE:
+            return {...state, [action.phrase.id]: action.phrase}
+        case EDIT_ONE_PHRASE:
             return {...state, [action.phrase.id]: action.phrase}
         default: {
             return state;
