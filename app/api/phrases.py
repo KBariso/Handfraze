@@ -85,5 +85,5 @@ def delete_phrase(id):
     deletePhrase = Phrase.query.filter(Phrase.id == id).first()
     db.session.delete(deletePhrase)
     db.session.commit()
-    
-    return flask.redirect("/")
+
+    return {"response":"ok"}
