@@ -12,7 +12,7 @@ const EditPhrase = ({phraseProp, hideForm}) => {
     const history = useHistory()
     const { phraseId } = useParams()
     console.log(phraseId, "I AM THE PHRASEID!!!!!!!!!")
-    console.log(phraseProp, "I AM THE PHRASEPROP!!!!")
+    console.log(phraseProp.category_id, "I AM THE PHRASEPROP!!!!")
 
     const categoriesObj = useSelector((state) => state.categories);
     console.log(categoriesObj[phraseProp.category_id]);
@@ -44,7 +44,7 @@ const EditPhrase = ({phraseProp, hideForm}) => {
             setTitle(phraseProp.title);
             setDescription(phraseProp.description)
             setMedia(phraseProp.media_url)
-            setCategory([categoriesObj[phraseProp.category_id]])
+            setCategory([phraseProp?.category_id])
             console.log("NOW HERE")
         }
     }, [phraseProp])
