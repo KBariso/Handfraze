@@ -11,9 +11,9 @@ const SinglePhrasePage = () => {
 
     const phraseObj = useSelector(state => state.phrases)
     // console.log(phraseObj)
-
+    const [edit, setEdit] = useState(false);
     // const phrase = Object.values(phraseObj)
-    // console.log(phrase, "fdsjkgfbdsgrs")
+
 
     useEffect(() => {
         dispatch(getOnePhrase(phraseId));
@@ -25,8 +25,12 @@ const SinglePhrasePage = () => {
             <h1>{phraseObj.title}</h1>
             <h1>{phraseObj.description}</h1>
             <iframe width="640" height="480" src={phraseObj.media_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <EditPhrase key={phraseId.key} phraseProp={phraseObj} />
+            <div>
+            {!edit && <button onClick={() => setEdit(!edit)}>Edit Phrase</button>}
+            </div>
+            <div>
+            {edit && <EditPhrase key={phraseId.key} phraseProp={phraseObj} hideForm={() => setEdit(false)}/>}
+            </div>
         </>
     )
 
