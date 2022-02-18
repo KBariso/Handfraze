@@ -2,6 +2,7 @@ import { getAllPhrases } from "../../store/phrases"
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import AllCategories from "../AllCategories";
 
 const AllPhrases = () => {
     const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const AllPhrases = () => {
     return (
         <>
             <div>
-                {phrase.map((phrase) => {
+                {/* {phrase.map((phrase) => {
                  return (
                      <Link to={`/phrases/${phrase.id}`}>
                          <div>
@@ -28,7 +29,8 @@ const AllPhrases = () => {
                          </div>
                      </Link>
                  )
-                })}
+                })} */}
+                <AllCategories phraseProp={phraseObj}/>
             </div>
         </>
     )

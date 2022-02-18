@@ -7,7 +7,7 @@ import EditPhrase from "../EditPhrase";
 const SinglePhrasePage = () => {
     const dispatch = useDispatch();
     const {phraseId} = useParams();
-    // console.log(phraseId)
+    console.log(phraseId)
 
     const phraseObj = useSelector(state => state.phrases)
     // console.log(phraseObj)
