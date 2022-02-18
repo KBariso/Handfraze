@@ -2,6 +2,7 @@ const GET_ALL_PHRASES = "phrases/GET_ALL_PHRASES"
 const GET_ONE_PHRASE = "phrases/GET_ONE_PHRASE"
 const CREATE_NEW_PHRASE = "phrases/CREATE_NEW_PHRASE"
 const EDIT_ONE_PHRASE = "phrases/EDIT_ONE_PHRASE"
+const DELETE_ONE_PHRASE = "phrases/DELETE_ONE_PHRASE"
 
 
 const allPhrases = (phrases) => ({
@@ -69,6 +70,23 @@ export const editOnePhrase = ({phraseId, title, description, media_url, category
     }
 }
 
+const deletePhrase = (phraseId) => {
+    return {
+        type: DELETE_ONE_PHRASE,
+        phraseId
+    }
+}
+
+export const deleteOnePhrase = (phraseId) => async (dispatch) => {
+    const res = await fetch(`/api/phrases/${phraseId}`, {
+        method: "DELETE",
+    });
+    if (res.ok) {
+        dispatch(deletePhrase(phraseId))
+    }
+}
+
+
 
 const initialState = {};
 const phraseReducer = (state = initialState, action) => {
@@ -80,14 +98,15 @@ const phraseReducer = (state = initialState, action) => {
             })
             return {...state, ...newState}
         case GET_ONE_PHRASE:
-            return {
-                ...state,
-                ...action.phrase
-            }
+            return {...state,...action.phrase}
         case CREATE_NEW_PHRASE:
             return {...state, [action.phrase.id]: action.phrase}
         case EDIT_ONE_PHRASE:
             return {...state, [action.phrase.id]: action.phrase}
+        case DELETE_ONE_PHRASE:
+            newState = {...state};
+            delete newState[action.phraseId];
+            return {newState};
         default: {
             return state;
         }

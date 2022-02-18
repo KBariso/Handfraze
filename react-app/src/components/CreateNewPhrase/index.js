@@ -14,7 +14,7 @@ const CreateNewPhrase = () => {
   const categoriesObj = useSelector((state) => state.categories);
   console.log(categoriesObj);
   const categories = Object.values(categoriesObj);
-//   console.log(categories);
+  // console.log(categories[0].id);
 
   useEffect(() => {
     dispatch(getAllCategories());
@@ -42,6 +42,20 @@ const CreateNewPhrase = () => {
         category_id: category
     };
 
+
+    if (!title) {
+      setErrors(["Please enter a title"]);
+    } else if (title.length < 2) {
+      setErrors(["Your title length is too short"]);
+    } else if (!description) {
+      setErrors(["Please enter a description"]);
+    } else if (description.length <= 3) {
+      setErrors(["Your description length is too short"]);
+    } else if (!category.length) {
+      setErrors(["Please select a category"]);
+    } else {
+      setErrors([]);
+
     let createdPhrase = await dispatch(createPhrase(payload))
     setTitle("")
     setDescription("")
@@ -49,6 +63,7 @@ const CreateNewPhrase = () => {
       if (createdPhrase) {
         history.push(`/`);
       }
+    }
   };
 //   if (!user) return <Redirect to="/" />;
 
@@ -82,11 +97,12 @@ const CreateNewPhrase = () => {
           onChange={updateMedia}
         />
         {categoriesObj &&
-                <select onChange={updateCategory} >
-                    {categories?.map((category) => {
-                        return <option value={category.id}>{category.title}</option>
-                    })}
-                </select>
+          <select onChange={updateCategory} >
+             <option value="none" selected disabled hidden>Select Category</option>
+              {categories.map((category) => {
+                  return <option value={category.id}>{category.title}</option>
+              })}
+          </select>
         }
 
 

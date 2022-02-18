@@ -1,7 +1,7 @@
 import { getAllPhrases } from "../../store/phrases"
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
-import { useParams} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const AllPhrases = () => {
     const dispatch = useDispatch();
@@ -22,11 +22,14 @@ const AllPhrases = () => {
             <div>
                 {phrase.map((phrase) => {
                  return (
-                     <div>
-                        <h1>{phrase.title}</h1>
-                        <h3>{phrase.description}</h3>
-                        <iframe width="320" height="240" src={phrase.media_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                     </div>
+                     <Link to={`/phrases/${phrase.id}`}>
+                         <div>
+                            <h1>{phrase.title}</h1>
+                            {/* <h3>{phrase.description}</h3> */}
+                            {/* <iframe width="320" height="240" src={phrase.media_url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                         </div>
+                     </Link>
+
                  )
                 })}
             </div>
