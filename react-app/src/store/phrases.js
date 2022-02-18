@@ -11,7 +11,7 @@ const allPhrases = (phrases) => ({
 })
 
 export const getAllPhrases = () => async (dispatch) => {
-    const res = await fetch(`/api/phrases`)
+    const res = await fetch(`/api/phrases/`)
     if (res.ok) {
         const phrases = await res.json();
         dispatch(allPhrases(phrases))
