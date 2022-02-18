@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, request
-from app.models import db, Phrase
+from app.models import db, Phrase, Category
 from app.forms.phrases import NewPhrase
 from flask_login import current_user, login_required
 
@@ -24,6 +24,25 @@ def get_all_phrases():
     phrases = [phrase.to_dict() for phrase in Phrase.query.all() ]
     # return {'phrases': [phrase.to_dict() for phrase in phrases]}
     return jsonify(phrases)
+
+
+
+# # ---------------GET ALL PHRASES THAT MATCH WITH CATEGORY -------------------
+# @phrases.route('/', methods=['GET'])
+# def category_phrases():
+
+#     phrases = [phrase.to_dict() for phrase in Phrase.query.all() ]
+#     categories = [category.to_dict() for category in Category.query.all()]
+#     category_phrases = [phrase for phrase in phrases if phrase.category_id in categories]
+
+#     print(category_phrases)
+
+#     return jsonify(category_phrases)
+
+
+
+
+
 
 
 

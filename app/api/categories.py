@@ -11,3 +11,5 @@ categories = Blueprint(
 def get_all_categories():
     categories = [category.to_dict() for category in Category.query.all()]
     return jsonify(categories)
+
+

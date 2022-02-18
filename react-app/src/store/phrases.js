@@ -4,6 +4,24 @@ const CREATE_NEW_PHRASE = "phrases/CREATE_NEW_PHRASE"
 const EDIT_ONE_PHRASE = "phrases/EDIT_ONE_PHRASE"
 const DELETE_ONE_PHRASE = "phrases/DELETE_ONE_PHRASE"
 
+// const GET_CATEGORY_PHRASES = "phrases/GET_CATEGORY_PHRASES"
+
+// const categoryPhrase = (phrases) => ({
+//     type:GET_CATEGORY_PHRASES,
+//     phrases
+// })
+
+// export const getAllCategoryPhrases = () => async (dispatch) => {
+//     const res = await fetch(`/api/phrases/`)
+//     if (res.ok) {
+//         const phrases = await res.json();
+//         dispatch(categoryPhrase(phrases))
+//     }
+// }
+
+
+
+
 
 const allPhrases = (phrases) => ({
     type: GET_ALL_PHRASES,
@@ -97,6 +115,11 @@ const phraseReducer = (state = initialState, action) => {
                 newState[phrase.id] = phrase;
             })
             return {...state, ...newState}
+        // case GET_CATEGORY_PHRASES:
+        //     action.phrases.forEach(phrase => {
+        //         newState[phrase.id] = phrase;
+        //     })
+        //     return {...state, ...newState}
         case GET_ONE_PHRASE:
             return {...state,...action.phrase}
         case CREATE_NEW_PHRASE:
