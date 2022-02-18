@@ -7,18 +7,25 @@ import { getAllCategories } from "../../store/categories";
 import { deleteOnePhrase } from "../../store/phrases";
 
 
-const EditPhrase = ({phraseProp}) => {
+const EditPhrase = ({phraseProp, hideForm}) => {
     const dispatch = useDispatch();
     const history = useHistory()
     const { phraseId } = useParams()
     console.log(phraseId, "I AM THE PHRASEID!!!!!!!!!")
-    console.log(phraseProp.category_id, "I AM THE PHRASEPROP!!!!")
+    console.log(phraseProp, "I AM THE PHRASEPROP!!!!")
 
     const categoriesObj = useSelector((state) => state.categories);
     console.log(categoriesObj[phraseProp.category_id]);
     const categories = Object.values(categoriesObj);
-    console.log(categories)
 
+    const userCat = categories.filter(category => category !== categoriesObj[phraseProp.category_id])
+    const userCatChoice = categories.filter(category => category === categoriesObj[phraseProp.category_id])
+    console.log(userCat)
+    console.log(categories)
+    console.log(userCatChoice)
+
+
+    // categoriesObj[phraseProp.category_id].title
 
     const user = useSelector(state => state.session.user);
     const userId = user?.id
@@ -37,16 +44,16 @@ const EditPhrase = ({phraseProp}) => {
             setTitle(phraseProp.title);
             setDescription(phraseProp.description)
             setMedia(phraseProp.media_url)
-            setCategory([phraseProp.category_id])
+            setCategory([categoriesObj[phraseProp.category_id]])
             console.log("NOW HERE")
         }
     }, [phraseProp])
 
 
 
-    // useEffect(() => {
-    //     dispatch(getOnePhrase(phraseId));
-    // }, [dispatch, phraseId]);
+    useEffect(() => {
+        dispatch(getOnePhrase(phraseId));
+    }, [dispatch, phraseId]);
 
 
 
@@ -70,20 +77,23 @@ const EditPhrase = ({phraseProp}) => {
 
         let updatedPhrase = await dispatch(editOnePhrase(updatedPayload))
 
-        if (updatedPhrase) {
+        if (!updatedPhrase) {
             dispatch(getOnePhrase(phraseId))
+            hideForm();
             // history.push(`/phrases/${phraseId}`)
         }
 
     }
 
 
-    const handleDelete = (e) => {
+    const handleDelete = async (e) => {
         e.preventDefault();
-        let deletedPhrase = dispatch(deleteOnePhrase(phraseId))
+        let deletedPhrase = await dispatch(deleteOnePhrase(phraseId))
 
-        if (deletedPhrase) {
+        if (!deletedPhrase) {
             history.push('/')
+            window.location.reload();
+            // dispatch(getAllCategories());
         }
 
     }
@@ -122,8 +132,11 @@ const EditPhrase = ({phraseProp}) => {
         />
         {categoriesObj &&
             <select onChange={(e) => setCategory(e.target.value)} >
-                {categories?.map((category) => {
-                // <option value={category.id} selected>{categoriesObj[phraseProp.category_id].title }</option>
+                {/* <option value={category.id} selected>{categoriesObj[phraseProp.category_id].title }</option> */}
+                {userCatChoice?.map((category) => {
+                    return <option value={category.id}>{category.title}</option>
+                })}
+                {userCat?.map((category) => {
                     return <option value={category.id}>{category.title}</option>
                 })}
             </select>
