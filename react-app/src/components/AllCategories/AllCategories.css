@@ -1,0 +1,22 @@
+.CategoriesandPhrasesContainer {
+    display: flex;
+
+
+}
+
+.CategoryContainer {
+    display: flex inline-flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    background-color: blueviolet;
+}
+
+.PhrasesContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+}
+
+.CategoryName:{
+    background-color: aliceblue;
+}

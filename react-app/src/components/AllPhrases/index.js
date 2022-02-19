@@ -21,16 +21,9 @@ const AllPhrases = () => {
     return (
         <>
             <div>
-                {/* {phrase.map((phrase) => {
-                 return (
-                     <Link to={`/phrases/${phrase.id}`}>
-                         <div>
-                            <h1>{phrase.title}</h1>
-                         </div>
-                     </Link>
-                 )
-                })} */}
                 <AllCategories phraseProp={phraseObj}/>
+
+                
             </div>
         </>
     )

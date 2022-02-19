@@ -4,6 +4,7 @@ import { getAllPhrases } from "../../store/phrases";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useParams } from "react-router-dom";
+import './AllCategories.css'
 
 
 const AllCategories = ({phraseProp}) => {
@@ -18,7 +19,7 @@ const AllCategories = ({phraseProp}) => {
     // const categoryTitles = categories.filter((category) => category.id === )
 
 
-    const [selectedPhrase, setSelectedPhrase] = useState(false)
+    const [selectedPhrase, setSelectedPhrase] = useState(1)
     console.log(selectedPhrase)
 
 
@@ -39,30 +40,38 @@ const AllCategories = ({phraseProp}) => {
     }, [dispatch]);
     return (
         <>
-            <h1 onClick={(e) => setSelectedPhrase(false)}>Categories </h1>
-                <div>
-                    {categories.map((category) => {
+            <div className="CategoriesandPhrasesContainer">
+                <div className="CategoryContainer">
+                <h1 onClick={(e) => setSelectedPhrase()}>Categories</h1>
+                        {categories.map((category) => {
                         return (
                             <div>
-                                {!selectedPhrase && <h1 id={category.id} onClick={(e) => setSelectedPhrase(category.id)}>{category.title}</h1> }
+                                {<h1 className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)}>{category.title}</h1> }
                             </div>
                         )
                     })}
-                </div>
-                    <div>
+
+                    </div>
+
+                    <div className="PhrasesContainer">
+                        <h1> Phrases Available</h1>
                         {phrases.map((phrase) => {
                             if (selectedPhrase === phrase.category_id){
                                 return (
-                                    <NavLink to={`/phrases/${phrase.id}`} onClick={(e) => setSelectedPhrase(false)}>
+                                    <NavLink to={`/phrases/${phrase.id}`}>
                                         <div>
                                            <h1>{phrase.title}</h1>
+
                                         </div>
+
                                     </NavLink>
+
                                 )
                             }
-                         })
-                        }
+                         })}
+
                     </div>
+                </div>
         </>
     )
 }
