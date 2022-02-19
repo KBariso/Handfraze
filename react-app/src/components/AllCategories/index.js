@@ -42,26 +42,25 @@ const AllCategories = ({phraseProp}) => {
         <>
             <div className="CategoriesandPhrasesContainer">
                 <div className="CategoryContainer">
-                <h1 onClick={(e) => setSelectedPhrase()}>Categories</h1>
+                <h1 className="CategoriesHeader" onClick={(e) => setSelectedPhrase()}>ASL Categories</h1>
                         {categories.map((category) => {
                         return (
                             <div>
-                                {<h1 className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)}>{category.title}</h1> }
+                                {<h1 tabindex="1" className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)}>{category.title}</h1> }
                             </div>
                         )
                     })}
 
                     </div>
 
-                    <div className="PhrasesContainer">
-                        <h1> Phrases Available</h1>
+                    <div  className="PhrasesContainer">
+                        <h1>Phrases Available</h1>
                         {phrases.map((phrase) => {
                             if (selectedPhrase === phrase.category_id){
                                 return (
                                     <NavLink to={`/phrases/${phrase.id}`}>
                                         <div>
-                                           <h1>{phrase.title}</h1>
-
+                                           <h1 className="PhraseName">{phrase.title}</h1>
                                         </div>
 
                                     </NavLink>

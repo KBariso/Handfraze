@@ -1,0 +1,52 @@
+.AboutContainer {
+    background-color: rgb(143, 170, 197);
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+}
+
+.InfoChoices {
+    display: flex;
+    padding-top: 5px;
+}
+
+.ImportanceASL {
+    background-color: aqua;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.WhyLearn{
+    background-color: yellowgreen;
+    margin-right: 5px;
+}
+
+.About {
+    background-color: brown;
+}
+
+.HomepageContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.WeekPhraseContainer {
+    background-color: rgb(143, 170, 197);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: solid 3px black
+}
+
+.linebreak {
+    border-color: black;
+    border-width: .1px;
+}
+
+
+
+.WeekPhrase {
+
+}

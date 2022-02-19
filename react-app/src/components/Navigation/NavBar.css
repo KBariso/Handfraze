@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: #cc765a;
+    background-color: #ffa500;
 }
 
 .SignupLogout {

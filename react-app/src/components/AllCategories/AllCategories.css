@@ -1,22 +1,52 @@
 .CategoriesandPhrasesContainer {
     display: flex;
-
+    justify-content:center;
 
 }
+
 
 .CategoryContainer {
     display: flex inline-flex;
     flex-direction: column;
     /* justify-content: space-around; */
-    background-color: blueviolet;
+    background-color: rgb(143, 170, 197);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 5px;
+    border: solid 3px black
+}
+
+
+.CategoriesHeader {
+    /* font-size:; */
 }
 
 .PhrasesContainer {
     display: flex;
     flex-direction: column;
-    background-color: brown;
+    background-color:  rgb(143, 170, 197);
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: solid 3px black
 }
 
-.CategoryName:{
-    background-color: aliceblue;
+.CategoryName {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.CategoryName:hover{
+    background-color:rgba(255, 170, 0, 0.63);
+}
+
+.CategoryName:focus{
+    background-color:#ffa500;
+}
+
+.PhraseName {
+    display: flex;
+    justify-content: center;
 }
