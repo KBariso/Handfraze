@@ -3,11 +3,13 @@ import thunk from 'redux-thunk';
 import session from './session'
 import phraseReducer from './phrases';
 import categoryReducer from './categories';
+import commentsReducer from './comments';
 
 const rootReducer = combineReducers({
   session,
   phrases: phraseReducer,
-  categories: categoryReducer
+  categories: categoryReducer,
+  comments: commentsReducer
 });
 
 
