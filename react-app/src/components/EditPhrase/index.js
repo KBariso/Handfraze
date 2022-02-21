@@ -75,6 +75,19 @@ const EditPhrase = ({phraseProp, hideForm}) => {
             category_id: category
         };
 
+        if (!title) {
+          setErrors(["Please enter a title"]);
+        } else if (title.length < 2) {
+          setErrors(["Your title length is too short"]);
+        } else if (!description) {
+          setErrors(["Please enter a description"]);
+        } else if (description.length <= 3) {
+          setErrors(["Your description length is too short"]);
+        } else if (!category.length) {
+          setErrors(["Please select a category"]);
+        } else {
+          setErrors([]);
+
         let updatedPhrase = await dispatch(editOnePhrase(updatedPayload))
 
         if (!updatedPhrase) {
@@ -82,6 +95,7 @@ const EditPhrase = ({phraseProp, hideForm}) => {
             hideForm();
             // history.push(`/phrases/${phraseId}`)
         }
+      }
 
     }
 
