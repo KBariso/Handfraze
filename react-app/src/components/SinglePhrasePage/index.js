@@ -9,7 +9,7 @@ import CreateNewComment from "../CreateCommentForm";
 const SinglePhrasePage = () => {
   const dispatch = useDispatch();
   const { phraseId } = useParams();
-  console.log(phraseId);
+  // console.log(phraseId);
 
   const phraseObj = useSelector((state) => state.phrases);
   // console.log(phraseObj)
@@ -51,6 +51,7 @@ const SinglePhrasePage = () => {
       <div>
         <CreateNewComment />
       </div>
+
 
     </>
   );
