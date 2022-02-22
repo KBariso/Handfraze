@@ -1,8 +1,12 @@
 .navbar {
     display: flex;
+    position: fixed;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #ffa500;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .SignupLogout {

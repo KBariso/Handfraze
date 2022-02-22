@@ -12,7 +12,6 @@ import AllPhrases from './components/AllPhrases';
 import SinglePhrasePage from './components/SinglePhrasePage';
 import CreateNewPhrase from './components/CreateNewPhrase';
 import EditPhrase from './components/EditPhrase';
-import AllCategories from './components/AllCategories';
 import PhraseComments from './components/AllPhraseComments';
 
 function App() {
@@ -40,15 +39,6 @@ function App() {
         </Route>
         <Route path='/phrases/new' exact={true}>
           <CreateNewPhrase />
-        </Route>
-        <Route path='/categories' exact={true}>
-          <AllCategories />
-        </Route>
-        <Route path='/comments' exact={true}>
-          <PhraseComments />
-        </Route>
-        <Route path='/phrases/:phraseId/edit' exact={true}>
-          <EditPhrase />
         </Route>
         <Route path='/phrases/:phraseId' exact={true}>
           <SinglePhrasePage />
