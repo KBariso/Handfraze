@@ -18,23 +18,96 @@ const AllPhrases = () => {
     }, [dispatch]);
 
 
+    const [showFirstTab, setShowFirstTab] = useState(true);
+    const [showSecondTab, setShowSecondTab] = useState(false);
+    const [showThirdTab, setShowThirdTab] = useState(false);
+
+    const openFirstTab = () => {
+        if (showFirstTab) return;
+        setShowFirstTab(true);
+      };
+
+      const openSecondTab = () => {
+        if (showSecondTab) return;
+        setShowSecondTab(true);
+      };
+
+      const openThirdTab = () => {
+        if (showThirdTab) return;
+        setShowThirdTab(true);
+      };
+
+
+      useEffect(() => {
+        if (!showFirstTab) return;
+        const closeFirstTab = () => {
+          setShowFirstTab(false);
+        };
+        document.addEventListener("click", closeFirstTab);
+
+        return () => document.removeEventListener("click", closeFirstTab);
+      }, [showFirstTab]);
+
+
+      useEffect(() => {
+        if (!showSecondTab) return;
+
+        const closeSecondTab = () => {
+          setShowSecondTab(false);
+        };
+
+        document.addEventListener("click", closeSecondTab);
+
+        return () => document.removeEventListener("click", closeSecondTab);
+      }, [showSecondTab]);
+
+      useEffect(() => {
+        if (!showThirdTab) return;
+
+        const closeThirdTab = () => {
+          setShowThirdTab(false);
+        };
+
+        document.addEventListener("click", closeThirdTab);
+
+        return () => document.removeEventListener("click", closeThirdTab);
+      }, [showThirdTab]);
+
+
 
     return (
         <>
             <div className="AboutContainer">
                 <div className="InfoChoices">
                     <div className="ImportanceASL">
-                       Importance of ASL
+                    <button class="tablinks" onClick={openFirstTab} id="defaultOpen">Importance of ASL</button>
                     </div>
                     <div className="WhyLearn">
-                       Why Learn ASL?
+                    <button class="tablinks" onClick={openSecondTab}>Why Learn ASL</button>
                     </div>
-                    <div className="About">
-                       About
+                    <div className="About" >
+                    <button class="tablinks" onClick={openThirdTab}>About</button>
                     </div>
                 </div>
+
                 <hr className="linebreak"/>
-                <h1>Info container</h1>
+
+                {showFirstTab && (
+                    <div className="tabcontent" id="Importance">
+                        <h3 >Info container</h3>
+                    </div>
+                )}
+                {showSecondTab && (
+                    <div className="tabcontent" id="Learn">
+                        <h3 >test</h3>
+                    </div>
+                )}
+                {showThirdTab && (
+                    <div className="tabcontent" id="About">
+                        <h3 >testttingggggg</h3>
+                    </div>
+                )}
+
             </div>
             <div className="HomepageContainer">
                 <AllCategories phraseProp={phraseObj}/>

@@ -10,6 +10,7 @@
     flex-direction: column;
     /* justify-content: space-around; */
     background-color: rgb(143, 170, 197);
+
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -17,9 +18,29 @@
     border: solid 3px black
 }
 
+.CategoryContainer button {
+    background-color: inherit;
+    font-size: large;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 .CategoriesHeader {
-    /* font-size:; */
+    /* background-color: aqua; */
+    display: flex;
+    position: flex;
+    margin-bottom: 0;
+}
+
+.PhrasesHeader {
+    display: flex;
+    position: flex;
+    margin-bottom: 0;
 }
 
 .PhrasesContainer {
@@ -40,10 +61,12 @@
 
 .CategoryName:hover{
     background-color:rgba(255, 170, 0, 0.63);
+    border-radius: 5px;
 }
 
 .CategoryName:focus{
     background-color:#ffa500;
+    border-radius: 5px;
 }
 
 .PhraseName {
