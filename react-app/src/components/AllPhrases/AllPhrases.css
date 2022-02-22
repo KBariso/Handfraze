@@ -11,28 +11,92 @@
 }
 
 
-
-
+.tabcontent {
+    margin: 10px;
+    padding-bottom: 5px;
+}
 
 .InfoChoices {
     display: flex;
     padding-top: 5px;
 
 }
+.radio3 {
+    position: fixed;
+    opacity: 0;
+    display: none;
+}
 
-.InfoChoices button {
-    /* background-color: inherit; */
+
+
+.radio2 {
+    position: fixed;
+    opacity: 0;
+    display: none;
+}
+
+.radio1 {
+    position: fixed;
+    opacity: 0;
+    display: none;
+}
+
+
+
+.radio3Label {
+    cursor: pointer;
+}
+
+.radio3Label:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+/* .radio3Label::selection {
+    background-color: rgb(0, 255, 0);
+} */
+
+.active {
+    background-color: blueviolet;
+}
+
+
+
+
+.radio2Label {
+    cursor: pointer;
+}
+
+.radio2Label:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.radio1Label {
+    cursor: pointer;
+}
+
+.radio1Label:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+
+
+
+/* .InfoChoices button {
+    background-color: inherit;
     float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-}
+} */
 
-.InfoChoices button:hover, button:focus {
+/* .InfoChoices button:hover, button:focus {
     background-color: rgb(214, 52, 52);
-}
+} */
 
 
 
@@ -43,12 +107,12 @@
 }
 
 .WhyLearn{
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     margin-right: 5px;
 }
 
 .About {
-    background-color: brown;
+    /* background-color: brown; */
 }
 
 .HomepageContainer {

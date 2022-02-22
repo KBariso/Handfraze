@@ -1,59 +1,119 @@
 import { getOnePhrase } from "../../store/phrases";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import EditPhrase from "../EditPhrase";
 import PhraseComments from "../AllPhraseComments";
 import CreateNewComment from "../CreateCommentForm";
+import { getAllCategories } from "../../store/categories";
+import { getAllPhrases } from "../../store/phrases";
+import "./SinglePhrasePage.css";
 
 const SinglePhrasePage = () => {
   const dispatch = useDispatch();
   const { phraseId } = useParams();
   // console.log(phraseId);
+  const categoriesObj = useSelector((state) => state.categories)
+  const categories = Object.values(categoriesObj)
 
   const phraseObj = useSelector((state) => state.phrases);
+  const phrases = Object.values(phraseObj)
   // console.log(phraseObj)
   const [edit, setEdit] = useState(false);
   // const phrase = Object.values(phraseObj)
+
+  const [selectedPhrase, setSelectedPhrase] = useState(1)
 
   useEffect(() => {
     dispatch(getOnePhrase(phraseId));
   }, [dispatch, phraseId]);
 
+  useEffect(() => {
+    dispatch(getAllCategories());
+ }, [dispatch]);
+
+ useEffect(() => {
+  dispatch(getAllPhrases());
+}, [dispatch]);
+
   return (
     <>
-      <h1>{phraseObj.title}</h1>
-      <h1>{phraseObj.description}</h1>
-      <iframe
-        width="640"
-        height="480"
-        src={phraseObj.media_url}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-      <div>
-        {!edit && <button onClick={() => setEdit(!edit)}>Edit Phrase</button>}
+    <div className="SinglePhraseContainer">
+      <div className="PhraseandCommentsContainer">
+        <h1 className="PhraseTitle">{phraseObj.title}</h1>
+        <iframe
+          width="640"
+          height="480"
+          src={phraseObj.media_url}
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <div className="EditPhraseButton">
+          {!edit && <button className="EditPhrase" onClick={() => setEdit(!edit)}>Edit Phrase</button>}
+        </div>
+        <h1 className="PhraseDescription">{phraseObj.description}</h1>
+        <div>
+        </div>
+        <div>
+          {edit && (
+            <EditPhrase
+              key={phraseId.key}
+              phraseProp={phraseObj}
+              hideForm={() => setEdit(false)}
+            />
+          )}
+        </div>
+        <div>
+          <PhraseComments phraseId={phraseId} />
+        </div>
+        <div>
+          <CreateNewComment />
+        </div>
       </div>
-      <div>
-        {edit && (
-          <EditPhrase
-            key={phraseId.key}
-            phraseProp={phraseObj}
-            hideForm={() => setEdit(false)}
-          />
-        )}
-      </div>
-      <div>
-        <PhraseComments phraseId={phraseId} />
-      </div>
-      <div>
-        <CreateNewComment />
-      </div>
+      <div className="CategoriesandPhrasesContainer2">
+                <div>
 
+                    <h3 className="CategoriesHeader" onClick={(e) => setSelectedPhrase()}>ASL Categories</h3>
+                    <div className="CategoryContainer">
+                            {categories.map((category) => {
+                            return (
+                                <div>
+                                    {<button tabindex="1" className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)} >{category.title}</button> }
+                                </div>
+                            )
+                        })}
 
-    </>
+                        </div>
+                </div>
+
+                    <div>
+                        <div>
+
+                        <h3 className="PhrasesHeader">Phrases Available</h3>
+                        <div className="PhrasesContainer">
+
+                            {phrases.map((phrase) => {
+                                if (selectedPhrase === phrase.category_id){
+                                    return (
+                                        <NavLink to={`/phrases/${phrase.id}`}>
+                                            <div>
+                                            <h1 className="PhraseName">{phrase.title}</h1>
+                                            </div>
+
+                                        </NavLink>
+
+                                    )
+                                }
+                            })}
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+        </>
   );
 };
 

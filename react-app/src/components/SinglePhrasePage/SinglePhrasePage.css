@@ -1,0 +1,30 @@
+.CategoriesandPhrasesContainer2 {
+    display: flex;
+    justify-content:center;
+    margin-top: 5%;
+
+}
+
+.SinglePhraseContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.PhraseandCommentsContainer {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.EditPhraseButton {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.PhraseDescription{
+    margin: 0;
+}
