@@ -4,6 +4,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { editComment } from "../../store/comments";
 import { getAllComments } from "../../store/comments";
 import { deleteComment } from "../../store/comments";
+import './EditComment.css'
 
 const EditComment = ({ phraseProp, hideForm }) => {
   const dispatch = useDispatch();
@@ -60,7 +61,7 @@ const EditComment = ({ phraseProp, hideForm }) => {
 
   return (
     <>
-      <p> {phraseProp.content} </p>
+      <p className="SingleCommentContainer"> {phraseProp.content} </p>
       {(usersComment && !edit) && <button onClick={() => setEdit(!edit)}>Edit Comment</button>}
 
 

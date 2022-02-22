@@ -1,7 +1,7 @@
 import { getAllPhrases } from "../../store/phrases"
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, NavLink } from "react-router-dom";
 import AllCategories from "../AllCategories";
 import './AllPhrases.css'
 
@@ -41,8 +41,10 @@ const AllPhrases = () => {
       useEffect(() => {
         if (!showFirstTab) return;
         const closeFirstTab = () => {
-          setShowFirstTab(false);
+
+            setShowFirstTab(false);
         };
+        // document.getElementsByClassName("radio3").click();
         document.addEventListener("click", closeFirstTab);
 
         return () => document.removeEventListener("click", closeFirstTab);
@@ -77,16 +79,26 @@ const AllPhrases = () => {
 
     return (
         <>
+
             <div className="AboutContainer">
                 <div className="InfoChoices">
                     <div className="ImportanceASL">
-                    <button class="tablinks" onClick={openFirstTab} id="defaultOpen">Importance of ASL</button>
+                    {/* <button class="tablinks" onClick={openFirstTab} id="defaultOpen">Importance of ASL</button> */}
+
+                        <input type="radio3" value="Importance" name="test" id="radio3" className="radio3" onClick={openFirstTab} defaultChecked/>
+                        <label activeClassName='active' className="radio3Label" for="radio3">Importance</label>
+
+
                     </div>
-                    <div className="WhyLearn">
-                    <button class="tablinks" onClick={openSecondTab}>Why Learn ASL</button>
+                    <div className="WhyLearn" >
+                    {/* <button class="tablinks" onClick={openSecondTab}>Why Learn ASL</button> */}
+                        <input type="radio2" value="Learn" name="test" id="radio2" className="radio2" onClick={openSecondTab}/>
+                        <label className="radio2Label" for="radio2">Learn</label>
                     </div>
                     <div className="About" >
-                    <button class="tablinks" onClick={openThirdTab}>About</button>
+                    {/* <button class="tablinks" onClick={openThirdTab}>About</button> */}
+                        <input type="radio1" value="About" name="test" id="radio1" className="radio1" onClick={openThirdTab}/>
+                        <label className="radio1Label" for="radio1">About</label>
                     </div>
                 </div>
 
@@ -94,17 +106,17 @@ const AllPhrases = () => {
 
                 {showFirstTab && (
                     <div className="tabcontent" id="Importance">
-                        <h3 >Info container</h3>
+                        <h3 >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
                     </div>
                 )}
                 {showSecondTab && (
                     <div className="tabcontent" id="Learn">
-                        <h3 >test</h3>
+                        <h3 >Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
                     </div>
                 )}
                 {showThirdTab && (
                     <div className="tabcontent" id="About">
-                        <h3 >testttingggggg</h3>
+                        <h3 >Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
                     </div>
                 )}
 

@@ -5,18 +5,17 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useParams } from "react-router-dom";
 import './AllCategories.css'
-import { render } from "react-dom";
 
 
 const AllCategories = ({phraseProp}) => {
     const dispatch = useDispatch()
     const categoriesObj = useSelector((state) => state.categories)
-    console.log(categoriesObj)
-    console.log(phraseProp.category_id, "I AM THE PHRASEPROP")
+    // console.log(categoriesObj)
+    console.log(phraseProp, "I AM THE PHRASEPROP")
     const phrases = Object.values(phraseProp)
-    console.log(phrases, "I AM THE PHRASES")
+    // console.log(phrases, "I AM THE PHRASES")
     const categories = Object.values(categoriesObj)
-    console.log(categories, "I AM THE CATEGORIES")
+    // console.log(categories, "I AM THE CATEGORIES")
     // const categoryTitles = categories.filter((category) => category.id === )
 
 

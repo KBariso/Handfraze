@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllComments } from "../../store/comments";
 import EditComment from "../EditComment";
+import './AllPhraseComments.css'
 
 
 const PhraseComments = ({phraseId, hideForm}) => {
@@ -42,18 +43,14 @@ const PhraseComments = ({phraseId, hideForm}) => {
             <h1 className="commentsHeader">All comments</h1>
             {/* {!edit && <button onClick={() => setEdit(!edit)}>Edit Comment</button>} */}
 
-          {comments?.map((comment) => {
-            return (
-              // <h1>{comment.content}</h1>
 
-             <EditComment hideForm={() => setEdit(false)} phraseProp={comment} />
-
-            );
-
-          })}
-              <div>
-
-              </div>
+          <div className="AllPhraseCommentsContainer">
+            {comments?.map((comment) => {
+              return (
+               <EditComment hideForm={() => setEdit(false)} phraseProp={comment} />
+              );
+            })}
+          </div>
 
         </div>
 
