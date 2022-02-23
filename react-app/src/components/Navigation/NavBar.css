@@ -3,13 +3,26 @@
     /* position: relative; */
     flex-direction: row;
     justify-content: space-evenly;
-    /* background-color:#0F7173; */
     margin-top: 0;
     left: 0;
     right: 0;
     margin-bottom: 2px;
-    /* box-shadow:0 4px 5px -1px black; */
+    margin-left: 20%;
+    margin-right: 20%;
+}
 
+.HandfrazeLogoContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+
+.HandfrazeLogo {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 95%;
 }
 
 .SignupLogout {

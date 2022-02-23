@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
 import { useParams, Link, NavLink } from "react-router-dom";
 import AllCategories from "../AllCategories";
+import logo from './images/CREATE.png'
 import './AllPhrases.css'
+import Footer from "../Footer";
 
 const AllPhrases = () => {
     const dispatch = useDispatch();
@@ -126,15 +128,25 @@ const AllPhrases = () => {
             </div>
             <div className="HomepageContainer">
                 <AllCategories phraseProp={phraseObj}/>
-            <div className="OuterWeekPhraseContainer">
-                <div className="WeekPhraseContainer">
-                    <h2 className="WeekPhrase">Phrase of the Week</h2>
-                    <iframe width="360" height="240" src="https://www.youtube.com/embed/nRuHFTWZqhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h3>Learn how to sign: I need to charge my phone</h3>
+                <div className="OuterWeekPhraseContainer">
+                    <div className="WeekPhraseContainer">
+                        <h2 className="WeekPhrase">Phrase of the Week</h2>
+                        <iframe width="360" height="240" src="https://www.youtube.com/embed/nRuHFTWZqhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>Learn how to sign: I need to charge my phone</h3>
+                    </div>
+                    <div className="CreateContainer">
+                        <NavLink to='/phrases/new' exact={true} activeClassName='HandfrazeLogo'>
+                        <img className="CreateLogo" src={logo}/>
+                        </NavLink>
+                        {/* <div> */}
+                            <h2 className="APhrase">A Phrase</h2>
+                        {/* </div> */}
+                    </div>
                 </div>
             </div>
+            <Footer />
 
-            </div>
+
         </>
     )
 

@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
+import logo from './images/HandfrazeLogoEdit.jpg'
 import './NavBar.css'
 
 const NavBar = () => {
@@ -16,14 +17,9 @@ const NavBar = () => {
     sessionLinks = (
       <nav>
         <div className='navbar'>
-          <div>
-            <NavLink to='/' exact={true} activeClassName='active'>
-            <h1>Handfraze</h1>
-            </NavLink>
-          </div>
-          <div>
-          <NavLink to='/phrases/new' exact={true} activeClassName='active'>
-          <h1>CREATE</h1>
+          <div className='HandfrazeLogoContainer'>
+            <NavLink to='/' exact={true} activeClassName='HandfrazeLogo'>
+            <img className="HandfrazeLogo" src={logo}/>
             </NavLink>
           </div>
           <div className='LogoutButtonContainer'>
@@ -38,7 +34,7 @@ const NavBar = () => {
       <div className='navbar'>
         <div>
           <NavLink to='/' exact={true} activeClassName='active'>
-            <h1>Handfraze</h1>
+          <img className="HandfrazeLogo" src={logo}/>
           </NavLink>
         </div>
         <div className="SignupLogout" >
