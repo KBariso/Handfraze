@@ -20,16 +20,21 @@ const CreateNewPhrase = () => {
     dispatch(getAllCategories());
   }, [dispatch]);
 
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [media, setMedia] = useState("");
   const [category, setCategory] = useState([]);
   const [errors, setErrors] = useState([]);
 
+    if (!user) return <Redirect to="/" />;
+
   const updateTitle = (e) => setTitle(e.target.value);
   const updateDescription = (e) => setDescription(e.target.value);
   const updateMedia = (e) => setMedia(e.target.value);
   const updateCategory = (e) => setCategory(e.target.value)
+
+  if (!user) return <Redirect to="/" />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,6 +56,8 @@ const CreateNewPhrase = () => {
       setErrors(["Please enter a description"]);
     } else if (description.length <= 3) {
       setErrors(["Your description length is too short"]);
+    } else if (description.length >= 255) {
+      setErrors(["Your description is too long!"]);
     } else if (!category.length) {
       setErrors(["Please select a category"]);
     } else {
@@ -65,7 +72,7 @@ const CreateNewPhrase = () => {
       }
     }
   };
-//   if (!user) return <Redirect to="/" />;
+
 
   return (
     <>

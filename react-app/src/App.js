@@ -13,6 +13,7 @@ import SinglePhrasePage from './components/SinglePhrasePage';
 import CreateNewPhrase from './components/CreateNewPhrase';
 import EditPhrase from './components/EditPhrase';
 import PhraseComments from './components/AllPhraseComments';
+import './index.css'
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -36,12 +37,25 @@ function App() {
         <Route path='/' exact={true}>
           <AllPhrases />
         </Route>
-        <Route path='/phrases/new' exact={true}>
-          <CreateNewPhrase />
-        </Route>
+
         <Route path='/phrases/:phraseId' exact={true}>
           <SinglePhrasePage />
         </Route>
+
+        <ProtectedRoute path='/phrases/new' exact={true}>
+        <Route path='/phrases/new' exact={true}>
+          <CreateNewPhrase />
+        </Route>
+        </ProtectedRoute>
+        <Route>
+          <div className='ErrorPage'>
+            <h1 style={{color:"black"}}>Looks like theres nothing here yet!</h1>
+            <p> Please redirect back to the home page.</p>
+          </div>
+
+        </Route>
+
+
       </Switch>
     </BrowserRouter>
   );

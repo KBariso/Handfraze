@@ -12,15 +12,22 @@ import "./SinglePhrasePage.css";
 const SinglePhrasePage = () => {
   const dispatch = useDispatch();
   const { phraseId } = useParams();
-  // console.log(phraseId);
+  // console.log(phraseId, "I AM THE PHRASE ID");
   const categoriesObj = useSelector((state) => state.categories)
   const categories = Object.values(categoriesObj)
+
+  const user = useSelector((state) => state.session.user);
+  const userId = user?.id;
 
   const phraseObj = useSelector((state) => state.phrases);
   const phrases = Object.values(phraseObj)
   // console.log(phraseObj)
+  // console.log(phrases)
   const [edit, setEdit] = useState(false);
-  // const phrase = Object.values(phraseObj)
+
+
+  const usersPhrase = userId == phraseId
+  console.log(usersPhrase, "I AM THE USERS PHRASE")
 
   const [selectedPhrase, setSelectedPhrase] = useState(1)
 
@@ -51,7 +58,7 @@ const SinglePhrasePage = () => {
           allowfullscreen
         ></iframe>
         <div className="EditPhraseButton">
-          {!edit && <button className="EditPhrase" onClick={() => setEdit(!edit)}>Edit Phrase</button>}
+          { (usersPhrase && !edit) && <button className="EditPhrase" onClick={() => setEdit(!edit)}>Edit Phrase</button>}
         </div>
         <h1 className="PhraseDescription">{phraseObj.description}</h1>
         <div>
