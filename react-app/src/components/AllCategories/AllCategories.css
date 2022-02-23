@@ -48,6 +48,7 @@
 .PhrasesContainer {
     display: flex;
     flex-direction: column;
+    justify-items: center;
     background-color:  #9AD0EC;;
     border-radius: 10px;
     padding-left: 15px;

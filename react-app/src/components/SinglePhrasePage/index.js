@@ -52,6 +52,11 @@ const SinglePhrasePage = () => {
           width="640"
           height="480"
           src={phraseObj.media_url}
+          alt="ASL"
+          onError={event => {
+            event.target.src = "https://play-lh.googleusercontent.com/4UPSnZVYh4pEeD85XXUAi3Lhdfuw54rGD2kcy--BA8t86Zuua1NpLQxUeVS7QzUZ91g"
+            event.onerror = null
+          }}
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

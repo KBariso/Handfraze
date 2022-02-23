@@ -129,12 +129,7 @@ const AllPhrases = () => {
             <div className="HomepageContainer">
                 <AllCategories phraseProp={phraseObj}/>
                 <div className="OuterWeekPhraseContainer">
-                    <div className="WeekPhraseContainer">
-                        <h2 className="WeekPhrase">Phrase of the Week</h2>
-                        <iframe width="360" height="240" src="https://www.youtube.com/embed/nRuHFTWZqhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <h3>Learn how to sign: I need to charge my phone</h3>
-                    </div>
-                    <div className="CreateContainer">
+                <div className="CreateContainer">
                         <NavLink to='/phrases/new' exact={true} activeClassName='HandfrazeLogo'>
                         <img className="CreateLogo" src={logo}/>
                         </NavLink>
@@ -142,6 +137,12 @@ const AllPhrases = () => {
                             <h2 className="APhrase">A Phrase</h2>
                         {/* </div> */}
                     </div>
+                    <div className="WeekPhraseContainer">
+                        <h2 className="WeekPhrase">Phrase of the Week</h2>
+                        <iframe width="360" height="240" src="https://www.youtube.com/embed/nRuHFTWZqhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>Learn how to sign: I need to charge my phone</h3>
+                    </div>
+
                 </div>
             </div>
             <Footer />
