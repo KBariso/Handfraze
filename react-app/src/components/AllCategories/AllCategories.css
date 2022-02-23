@@ -1,6 +1,8 @@
 .CategoriesandPhrasesContainer {
     display: flex;
     justify-content:center;
+    background-color: #f7f7f7;
+    width: 45%
 
 }
 
@@ -9,7 +11,7 @@
     display: flex inline-flex;
     flex-direction: column;
     /* justify-content: space-around; */
-    background-color: rgb(143, 170, 197);
+    background-color: #9AD0EC;
 
     border-radius: 10px;
     padding-left: 15px;
@@ -46,7 +48,7 @@
 .PhrasesContainer {
     display: flex;
     flex-direction: column;
-    background-color:  rgb(143, 170, 197);
+    background-color:  #9AD0EC;;
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;

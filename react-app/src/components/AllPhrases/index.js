@@ -41,10 +41,8 @@ const AllPhrases = () => {
       useEffect(() => {
         if (!showFirstTab) return;
         const closeFirstTab = () => {
-
             setShowFirstTab(false);
         };
-        // document.getElementsByClassName("radio3").click();
         document.addEventListener("click", closeFirstTab);
 
         return () => document.removeEventListener("click", closeFirstTab);
@@ -81,16 +79,14 @@ const AllPhrases = () => {
         <>
 
             <div className="AboutContainer">
-                <div className="InfoChoices">
+                <div className="AboutInnerContainer">
+                                    <div className="InfoChoices">
                     <div className="ImportanceASL">
                     {/* <button class="tablinks" onClick={openFirstTab} id="defaultOpen">Importance of ASL</button> */}
-
                         <input type="radio3" value="Importance" name="test" id="radio3" className="radio3" onClick={openFirstTab} defaultChecked/>
-                        <label activeClassName='active' className="radio3Label" for="radio3">Importance</label>
-
-
+                        <label className="radio3Label" for="radio3">Importance</label>
                     </div>
-                    <div className="WhyLearn" >
+                    <div className="WhyLearn">
                     {/* <button class="tablinks" onClick={openSecondTab}>Why Learn ASL</button> */}
                         <input type="radio2" value="Learn" name="test" id="radio2" className="radio2" onClick={openSecondTab}/>
                         <label className="radio2Label" for="radio2">Learn</label>
@@ -105,30 +101,38 @@ const AllPhrases = () => {
                 <hr className="linebreak"/>
 
                 {showFirstTab && (
-                    <div className="tabcontent" id="Importance">
-                        <h3 >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
+                    <div className="tabcontent1" id="Importance">
+                        <h3 className="firstTabContainer"> Importance </h3>
+                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+                             <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 )}
                 {showSecondTab && (
-                    <div className="tabcontent" id="Learn">
-                        <h3 >Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h3>
+                    <div className="tabcontent2" id="Learn">
+                        <h3 className="secondTabContainer">Learn</h3>
+                        <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     </div>
                 )}
                 {showThirdTab && (
-                    <div className="tabcontent" id="About">
-                        <h3 >Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+                    <div className="tabcontent3" id="About">
+                        <h3 className="thirdTabContainer">About</h3>
+                    <p>Excepteur sint</p> <p>occaecat cupidatat non proident,</p>  sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                 )}
+                </div>
+
 
             </div>
             <div className="HomepageContainer">
                 <AllCategories phraseProp={phraseObj}/>
-
+            <div className="OuterWeekPhraseContainer">
                 <div className="WeekPhraseContainer">
                     <h2 className="WeekPhrase">Phrase of the Week</h2>
-                    <iframe width="400" height="300" src="https://www.youtube.com/embed/nRuHFTWZqhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="360" height="240" src="https://www.youtube.com/embed/nRuHFTWZqhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <h3>Learn how to sign: I need to charge my phone</h3>
                 </div>
+            </div>
 
             </div>
         </>
