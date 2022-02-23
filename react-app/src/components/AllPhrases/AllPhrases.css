@@ -1,19 +1,51 @@
 .AboutContainer {
     /* display: flex; */
     justify-self: center;
-    background-color: rgb(143, 170, 197);
-    margin-left: 20%;
+    background-color: #9AD0EC;
+    /* margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-right: 25%; */
+    padding-top: 2%;
+    padding-bottom: 10px;
+
+}
+
+.AboutInnerContainer {
+        margin-left: 20%;
     margin-right: 20%;
     border-radius: 10px;
     margin-left: 25%;
     margin-right: 25%;
-
 }
 
 
-.tabcontent {
+.tabcontent1 {
     margin: 10px;
     padding-bottom: 5px;
+    background-color: #0F7173;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.tabcontent2 {
+    margin: 10px;
+    padding-bottom: 5px;
+    /* background-color: #726E75; */
+    /* color: whitesmoke; */
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.tabcontent3 {
+    margin: 10px;
+    margin-bottom: 10px;
+    background-color: #0F7173;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .InfoChoices {
@@ -45,11 +77,17 @@
 
 .radio3Label {
     cursor: pointer;
+    background-color: #0F7173;
+    color: whitesmoke;
+    padding: 5px;
+    border-radius: 3px;
+    /* background-color: red; */
 }
 
 .radio3Label:hover {
     cursor: pointer;
-    background-color: red;
+    border-color: #0F7173 solid 1px;
+    /* background-color: #ffa500; */
 }
 
 /* .radio3Label::selection {
@@ -57,51 +95,73 @@
 } */
 
 .active {
+    background-color: orange;
+    cursor: pointer;
+
+}
+
+/* .active1:focus {
     background-color: blueviolet;
+} */
+
+.firstTabContainer {
+    background-color: #0F7173;
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+}
+
+.secondTabContainer {
+    /* background-color: #ffa500; */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
 }
 
 
+.thirdTabContainer {
+    background-color: #0F7173;
+    color: whitesmoke;
+    border-radius: 5px;
+    margin: 0;
+}
 
 
 .radio2Label {
     cursor: pointer;
+    background-color: #ffa500;
+    /* border-color: #0F7173 solid 1px; */
+    padding: 5px;
+    border-radius: 3px;
+
 }
 
 .radio2Label:hover {
     cursor: pointer;
-    background-color: red;
+    background-color: none;
 }
 
 .radio1Label {
+    background-color: #0F7173;
+    color: whitesmoke;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .radio1Label:hover {
     cursor: pointer;
-    background-color: red;
-}
-
-
-
-
-/* .InfoChoices button {
     background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-} */
-
-/* .InfoChoices button:hover, button:focus {
-    background-color: rgb(214, 52, 52);
-} */
+    color: black;
+    border: black 1px solid;
+}
 
 
 
 .ImportanceASL {
     /* background-color: aqua; */
+
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -118,16 +178,21 @@
 .HomepageContainer {
     display: flex;
     justify-content: space-around;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .WeekPhraseContainer {
-    background-color: rgb(143, 170, 197);
+    display: flex;
+    flex-direction: column;
+
+    background-color: #9AD0EC;
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    border: solid 3px black
+    border: solid 3px black;
+    width:80%;
+    height:85%
 }
 
 .linebreak {
@@ -137,7 +202,14 @@
     margin-top: 20px;
 }
 
-
+.OuterWeekPhraseContainer {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    width:45%
+}
 
 .WeekPhrase {
 

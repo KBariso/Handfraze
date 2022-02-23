@@ -33,8 +33,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route path='/' exact={true} >
-          <h1>My Home Page</h1>
+        <Route path='/' exact={true}>
           <AllPhrases />
         </Route>
         <Route path='/phrases/new' exact={true}>
