@@ -33,6 +33,8 @@ const EditComment = ({ phraseProp, hideForm }) => {
 
     if (!content) {
       setErrors(["Please enter a comment"]);
+    } else if (content.length >= 255) {
+      setErrors(["Your comment is too long!"]);
     }
        else {
       setErrors([]);

@@ -83,7 +83,9 @@ const EditPhrase = ({phraseProp, hideForm}) => {
           setErrors(["Please enter a description"]);
         } else if (description.length <= 3) {
           setErrors(["Your description length is too short"]);
-        } else if (!category.length) {
+        } else if (description.length >= 255) {
+          setErrors(["Your description is too long!"]);
+        }else if (!category.length) {
           setErrors(["Please select a category"]);
         } else {
           setErrors([]);

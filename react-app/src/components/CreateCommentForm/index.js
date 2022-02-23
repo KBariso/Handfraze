@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Redirect } from "react-router-dom";
 import { createNewComment } from "../../store/comments";
 
 
 const CreateNewComment = () => {
   const dispatch = useDispatch();
   const phrases = useSelector(state => state.phrases.id);
-  const user = useSelector(state => state.session.user?.id)
+  const user = useSelector((state) => state.session.user?.id)
   const userId= user;
 
   const [content, setContent] = useState("");
@@ -14,6 +15,7 @@ const CreateNewComment = () => {
 
   const updateContent = (e) => setContent(e.target.value);
 
+  // if (!user) return <Redirect to="/" />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +29,8 @@ const CreateNewComment = () => {
 
       if (!content) {
         setErrors(["Please provide a comment"]);
+      } else if (content.length >= 255) {
+        setErrors(["Your comment is too long!"]);
       }
       else {
       setErrors([]);
@@ -39,9 +43,11 @@ const CreateNewComment = () => {
   };
 
 
+
   return (
     <div >
-      <form className="form" onSubmit={handleSubmit}>
+     {
+      user && <form className="form" onSubmit={handleSubmit}>
         <div>
           {errors.length > 0 && (
             <ul className="errors">
@@ -64,6 +70,7 @@ const CreateNewComment = () => {
             <button type="submit">Create Comment</button>
           </div>
       </form>
+     }
     </div>
   );
 };
