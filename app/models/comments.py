@@ -11,7 +11,7 @@ class Comment(db.Model):
     phrase_id = db.Column(db.Integer, db.ForeignKey("phrases.id"), nullable=False)
 
     user = db.relationship("User", back_populates="comment")
-    phrases = db.relationship("Phrase", back_populates="comment")
+    phrases = db.relationship("Phrase", back_populates="comments")
 
 
 
