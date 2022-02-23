@@ -3,6 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { createPhrase } from "../../store/phrases";
 import { getAllCategories } from "../../store/categories";
+import logo1 from './images/Title.PNG'
+import logo2 from './images/Description.PNG'
+import logo3 from './images/Media.PNG'
+import logo4 from './images/Category.PNG'
+import './CreateNewPhrase.css'
 
 const CreateNewPhrase = () => {
   const dispatch = useDispatch();
@@ -76,44 +81,59 @@ const CreateNewPhrase = () => {
 
   return (
     <>
-      <h1>CREATE FORM</h1>
-      <form className="form" onSubmit={handleSubmit}>
-        {errors.length > 0 && (
-          <ul className="errors">
-            {errors.map((error) => (
-              <li key={error}>{error}</li>
-            ))}
-          </ul>
-        )}
-        <input
-          placeholder="Title"
-          type="text"
-          value={title}
-          onChange={updateTitle}
-        />
-        <textarea
-          placeholder="Description"
-          type="text"
-          value={description}
-          onChange={updateDescription}
-        />
-        <input
-          placeholder="Media"
-          type="text"
-          value={media}
-          onChange={updateMedia}
-        />
-        {categoriesObj &&
-          <select onChange={updateCategory} >
-             <option value="none" selected disabled hidden>Select Category</option>
-              {categories.map((category) => {
-                  return <option value={category.id}>{category.title}</option>
-              })}
-          </select>
-        }
+      <h1 className="CreateAPhraseHeader">CREATE A PHRASE</h1>
+      <form className="formContainer" onSubmit={handleSubmit}>
+        <div className="PhraseInputsContainer">
+          {errors.length > 0 && (
+            <ul className="errors">
+              {errors.map((error) => (
+                <li key={error}>{error}</li>
+              ))}
+            </ul>
+          )}
+          <div className="CreateTitleContainer">
+          <img className="TitleLogo" src={logo1}/>
+            <input className="CreateTitle"
+              placeholder="Title"
+              type="text"
+              value={title}
+              onChange={updateTitle}
+            />
+          </div>
+          <div className="CreateDescriptionContainer">
+          <img className="DescriptionLogo" src={logo2}/>
+            <textarea className="CreateDescription"
+              placeholder="Description"
+              type="text"
+              value={description}
+              onChange={updateDescription}
+            />
+          </div>
+          <div className="CreateMediaContainer">
+          <img className="MediaLogo" src={logo3}/>
+            <input className="CreateMedia"
+              placeholder="Media"
+              type="text"
+              value={media}
+              onChange={updateMedia}
+            />
+          </div>
+            <button type="submit">Submit</button>
+
+            </div>
+          <div className="CreateCategoriesContainer">
+          <img className="CategoryLogo" src={logo4}/>
+            {categoriesObj &&
+              <select onChange={updateCategory} >
+                 <option value="none" selected disabled hidden>Select Category</option>
+                  {categories.map((category) => {
+                      return <option value={category.id}>{category.title}</option>
+                  })}
+              </select>
+            }
+          </div>
 
 
-        <button type="submit">Submit</button>
       </form>
     </>
   );

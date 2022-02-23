@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 // import LoginForm from './components/LoginFormModal/LoginForm';
 // import SignUpForm from './components/SignupFormModal/SignUpForm';
 import NavBar from './components/Navigation/NavBar';
+import Footer from './components/Footer';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 // import UsersList from './components/UsersList';
 // import User from './components/User';
@@ -52,11 +53,9 @@ function App() {
             <h1 style={{color:"black"}}>Looks like theres nothing here yet!</h1>
             <p> Please redirect back to the home page.</p>
           </div>
-
         </Route>
-
-
       </Switch>
+
     </BrowserRouter>
   );
 }

@@ -12,7 +12,7 @@ import "./SinglePhrasePage.css";
 const SinglePhrasePage = () => {
   const dispatch = useDispatch();
   const { phraseId } = useParams();
-  // console.log(phraseId, "I AM THE PHRASE ID");
+  console.log(phraseId, "I AM THE PHRASE ID");
   const categoriesObj = useSelector((state) => state.categories)
   const categories = Object.values(categoriesObj)
 
@@ -21,12 +21,12 @@ const SinglePhrasePage = () => {
 
   const phraseObj = useSelector((state) => state.phrases);
   const phrases = Object.values(phraseObj)
-  // console.log(phraseObj)
-  // console.log(phrases)
+  console.log(phraseObj.phraseId)
+  console.log(phrases)
   const [edit, setEdit] = useState(false);
 
 
-  const usersPhrase = userId == phraseId
+  const usersPhrase = userId == phraseObj.user_id
   console.log(usersPhrase, "I AM THE USERS PHRASE")
 
   const [selectedPhrase, setSelectedPhrase] = useState(1)

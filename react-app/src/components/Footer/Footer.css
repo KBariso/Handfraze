@@ -1,0 +1,38 @@
+.footer {
+    background-color: #f7f7f7;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    font-weight: 700px;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .footer-names {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-bottom: 14px;
+  }
+
+  .icons {
+    border-top: 1px solid black;
+    padding-top: 5px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .name {
+    padding-top: 6px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+
+  .name:hover {
+    cursor: pointer;
+    font-size: 18px;
+  }

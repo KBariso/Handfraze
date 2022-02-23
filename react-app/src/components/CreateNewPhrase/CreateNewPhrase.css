@@ -1,0 +1,56 @@
+.formContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20%;
+    margin-right: 20%;
+    /* width: 50%; */
+}
+
+.CreateAPhraseHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.PhraseInputsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.CreateCategoriesContainer {
+
+}
+
+
+
+.CreateTitleContainer {
+    width: 40%;
+    padding-bottom: 10px;
+}
+
+.CreateTitle {
+    width: 100%;
+}
+
+
+.CreateDescriptionContainer {
+    width: 80%;
+    height: 80%;
+}
+
+.CreateDescription {
+    width:100%;
+    height: 100px;
+}
+
+
+
+.CreateMediaContainer {
+    width: 30%;
+    padding-bottom: 10px;
+}
+
+.CreateMedia {
+    width: 100%;
+}
