@@ -27,14 +27,14 @@ const CreateNewPhrase = () => {
   const [category, setCategory] = useState([]);
   const [errors, setErrors] = useState([]);
 
-    if (!user) return <Redirect to="/" />;
+    // if (!user) return <Redirect to="/" />;
 
   const updateTitle = (e) => setTitle(e.target.value);
   const updateDescription = (e) => setDescription(e.target.value);
   const updateMedia = (e) => setMedia(e.target.value);
   const updateCategory = (e) => setCategory(e.target.value)
 
-  if (!user) return <Redirect to="/" />;
+  // if (!user) return <Redirect to="/" />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

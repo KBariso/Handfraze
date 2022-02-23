@@ -44,7 +44,7 @@ const AllCategories = ({phraseProp}) => {
                             {categories.map((category) => {
                             return (
                                 <div>
-                                    {<button tabindex="1" className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)} >{category.title}</button> }
+                                    {<button tabIndex="1" className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)} >{category.title}</button> }
                                 </div>
                             )
                         })}

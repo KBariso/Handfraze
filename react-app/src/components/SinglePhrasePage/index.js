@@ -53,9 +53,9 @@ const SinglePhrasePage = () => {
           height="480"
           src={phraseObj.media_url}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
         <div className="EditPhraseButton">
           { (usersPhrase && !edit) && <button className="EditPhrase" onClick={() => setEdit(!edit)}>Edit Phrase</button>}
@@ -87,7 +87,7 @@ const SinglePhrasePage = () => {
                             {categories.map((category) => {
                             return (
                                 <div>
-                                    {<button tabindex="1" className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)} >{category.title}</button> }
+                                    {<button tabIndex="1" className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)} >{category.title}</button> }
                                 </div>
                             )
                         })}

@@ -38,15 +38,15 @@ function App() {
           <AllPhrases />
         </Route>
 
-        <Route path='/phrases/:phraseId' exact={true}>
-          <SinglePhrasePage />
-        </Route>
 
         <ProtectedRoute path='/phrases/new' exact={true}>
         <Route path='/phrases/new' exact={true}>
           <CreateNewPhrase />
         </Route>
         </ProtectedRoute>
+        <Route path='/phrases/:phraseId' exact={true}>
+          <SinglePhrasePage />
+        </Route>
         <Route>
           <div className='ErrorPage'>
             <h1 style={{color:"black"}}>Looks like theres nothing here yet!</h1>
