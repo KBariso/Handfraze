@@ -205,6 +205,7 @@
 .WeekPhraseContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-top: 20px;
     background-color: #9AD0EC;
     border-radius: 10px;

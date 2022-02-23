@@ -65,10 +65,14 @@ const CreateNewPhrase = () => {
       setErrors(["Your description is too long!"]);
     } else if (!category.length) {
       setErrors(["Please select a category"]);
+    } else if (!media.length) {
+      setMedia("https://play-lh.googleusercontent.com/4UPSnZVYh4pEeD85XXUAi3Lhdfuw54rGD2kcy--BA8t86Zuua1NpLQxUeVS7QzUZ91g");
     } else {
+
       setErrors([]);
 
     let createdPhrase = await dispatch(createPhrase(payload))
+    // console.log(createPhrase)
     setTitle("")
     setDescription("")
     setMedia("")

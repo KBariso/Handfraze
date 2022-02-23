@@ -12,7 +12,7 @@ class Phrase(db.Model):
 
     user = db.relationship("User", back_populates="phrases")
     categories = db.relationship("Category", back_populates="phrases")
-    comments = db.relationship("Comment", back_populates="phrases", cascade="all, delete-orphan")
+    comments = db.relationship("Comment", back_populates="phrases", cascade="all, delete")
 
 
 

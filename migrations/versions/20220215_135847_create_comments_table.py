@@ -23,7 +23,7 @@ def upgrade():
     sa.Column('content', sa.String(length=256), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('phrase_id', sa.Integer(), nullable=False),
-    # sa.ForeignKeyConstraint(['phrase_id'], ['phrases.id'], ),
+    sa.ForeignKeyConstraint(['phrase_id'], ['phrases.id'], ),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )

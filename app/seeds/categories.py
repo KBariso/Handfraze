@@ -3,7 +3,7 @@ from app.models import db, Category
 def seed_categories():
 
     category1 = Category(
-        title = "Basic Phrase"
+        title = "Basic Phrases"
     )
     category2 = Category(
         title = "Greeting"
@@ -17,6 +17,9 @@ def seed_categories():
     category5 = Category(
         title = "Location"
     )
+    category6 = Category(
+        title = "Other"
+    )
 
 
     db.session.add(category1)
@@ -24,6 +27,7 @@ def seed_categories():
     db.session.add(category3)
     db.session.add(category4)
     db.session.add(category5)
+    db.session.add(category6)
 
     db.session.commit()
 
