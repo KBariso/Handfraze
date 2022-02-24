@@ -73,13 +73,18 @@ const CreateNewPhrase = () => {
       setErrors([]);
 
     let createdPhrase = await dispatch(createPhrase(payload))
-    // console.log(createPhrase)
+    if (createdPhrase.errors) {
+      setErrors(createdPhrase.errors)
+    } else {
     setTitle("")
     setDescription("")
     setMedia("")
       if (createdPhrase) {
         history.push(`/`);
       }
+    }
+    // console.log(createPhrase)
+
     }
   };
 
@@ -130,7 +135,7 @@ const CreateNewPhrase = () => {
           <div className="CreateMediaContainer">
           <img className="MediaLogo" src={logo3}/>
             <input className="CreateMedia"
-              placeholder="Media"
+              placeholder="Media - Image/Embedded URL"
               type="text"
               value={media}
               onChange={updateMedia}

@@ -64,10 +64,13 @@ export const createPhrase = (phrase) => async (dispatch) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(phrase),
     });
+    const data = await res.json();
+    if (data.errors) {
+        return data
+    }
     if (res.ok) {
-        const phrase = await res.json();
-        dispatch(newPhrase(phrase));
-        return phrase
+        dispatch(newPhrase(data));
+        return data
     }
 }
 
