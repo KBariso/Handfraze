@@ -63,8 +63,12 @@ const EditComment = ({ phraseProp, hideForm }) => {
 
   return (
     <>
-      <p className="SingleCommentContainer"> {phraseProp.content} </p>
-      {(usersComment && !edit) && <button onClick={() => setEdit(!edit)}>Edit Comment</button>}
+    <div>
+            <p className="SingleCommentContainer"> {phraseProp.content} </p>
+            <div className="EditCommentButtonContainer">
+
+              {(usersComment && !edit) && <button className="EditCommentButton" onClick={() => setEdit(!edit)}>Edit Comment</button>}
+            </div>
 
 
       { edit && <form className="form" onSubmit={handleSubmit}>
@@ -89,6 +93,8 @@ const EditComment = ({ phraseProp, hideForm }) => {
         <button type="submit">Save Changes</button>
         { (usersComment) && <button className='editDeleteButton' onClick={handleDelete}>Delete Comment</button>}
       </form>}
+    </div>
+
     </>
   );
 };

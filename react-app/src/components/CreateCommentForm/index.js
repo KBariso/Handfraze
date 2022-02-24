@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { createNewComment } from "../../store/comments";
+import './CreateCommentForm.css'
 
 
 const CreateNewComment = () => {
@@ -45,9 +46,9 @@ const CreateNewComment = () => {
 
 
   return (
-    <div >
+    <div className="CreateCommentFormContainer">
      {
-      user && <form className="form" onSubmit={handleSubmit}>
+      user && <form className="CreateCommentForm" onSubmit={handleSubmit}>
         <div>
           {errors.length > 0 && (
             <ul className="errors">

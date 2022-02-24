@@ -111,7 +111,7 @@ const SinglePhrasePage = () => {
                                     return (
                                         <NavLink to={`/phrases/${phrase.id}`}>
                                             <div>
-                                            <h1 className="PhraseName">{phrase.title}</h1>
+                                            <h3 className="PhraseName">{phrase.title}</h3>
                                             </div>
 
                                         </NavLink>
