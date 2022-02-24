@@ -5,6 +5,7 @@ import { editOnePhrase } from "../../store/phrases";
 import { getOnePhrase } from "../../store/phrases";
 import { getAllCategories } from "../../store/categories";
 import { deleteOnePhrase } from "../../store/phrases";
+import './EditPhrase.css'
 
 
 const EditPhrase = ({phraseProp, hideForm}) => {
@@ -128,39 +129,46 @@ const EditPhrase = ({phraseProp, hideForm}) => {
             ))}
           </ul>
         )}
-        <input
+        <input className="EditPhraseTitle"
           placeholder="Title"
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <textarea
+        <div className="EditPhraseDescriptionContainer" >
+        <textarea className="EditPhraseDescription"
           placeholder="Description"
           type="text"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <input
+        </div>
+
+        <input className="EditPhraseMedia"
           placeholder="Media"
           type="text"
           value={media}
           onChange={(e) => setMedia(e.target.value)}
         />
+        <div className="EditPhraseCategoryContainer">
         {categoriesObj &&
             <select onChange={(e) => setCategory(e.target.value)} >
                 {/* <option value={category.id} selected>{categoriesObj[phraseProp.category_id].title }</option> */}
                 {userCatChoice?.map((category) => {
-                    return <option value={category.id}>{category.title}</option>
+                    return <option  value={category.id}>{category.title}</option>
                 })}
                 {userCat?.map((category) => {
                     return <option value={category.id}>{category.title}</option>
                 })}
             </select>
         }
+        </div>
 
+        <div className="EditDeletePhraseBttns">
+          <button type="submit">Save Changes</button>
+          <button onClick={handleDelete}>Delete Phrase</button>
+        </div>
 
-        <button type="submit">Save Changes</button>
-        <button onClick={handleDelete}>Delete Phrase</button>
       </form>
 
         </>
