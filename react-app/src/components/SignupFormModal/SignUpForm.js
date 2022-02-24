@@ -32,8 +32,6 @@ const SignUpForm = () => {
       setErrors(["Password and re-entered password do not match!"])
     } else {
       setErrors([])
-
-
     }
 
 
@@ -52,20 +50,12 @@ const SignUpForm = () => {
 
 //   useEffect(() => {
 //     const errors = [];
-//   if (!username.length) {
-//       errors.push("Please provide a username")
-//   } else if (!email.length) {
-//       errors.push("Please enter an email")
-//   } else if (!password.length) {
-//     errors.push("Please enter a password")
-//   } else if (!repeatPassword.length) {
-//     errors.push("Please re-enter your password")
-//   } else if (password !== repeatPassword) {
-//     errors.push("Password and re-entered password do not match!")
-//   }
+//     if (username.length <= 3) {
+//       setErrors(["Requested Username is too short"])
+//     }
 //   setErrors(errors)
 
-// },[username, email, password, repeatPassword])
+// },[username])
 
 
 
@@ -98,6 +88,8 @@ const SignUpForm = () => {
   }
 
   return (
+    <div className='LoginFormContainer'>
+
     <form className='loginForm' onSubmit={onSignUp}>
       <div>
         {errors.map((error, ind) => (
@@ -145,11 +137,15 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
+      <div className='ModalSignupDemo'>
+
       <button className='buttonLogin'type='submit'>Sign Up</button>
        <button className='demoButtonLogin'type="submit" onClick={demoLogin}>
                     User Demo Login
                 </button>
+      </div>
     </form>
+    </div>
   );
 };
 

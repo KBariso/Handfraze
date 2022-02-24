@@ -44,7 +44,7 @@ const AllCategories = ({phraseProp}) => {
                             {categories.map((category) => {
                             return (
                                 <div>
-                                    {<button tabIndex="1" className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)} >{category.title}</button> }
+                                    {<button tabIndex="1" className="CategoryName" id={category.id} onClick={(e) => setSelectedPhrase(category.id)}><p>{category.title}</p></button> }
                                 </div>
                             )
                         })}
@@ -61,9 +61,9 @@ const AllCategories = ({phraseProp}) => {
                             {phrases.map((phrase) => {
                                 if (selectedPhrase === phrase.category_id){
                                     return (
-                                        <NavLink to={`/phrases/${phrase.id}`}>
+                                        <NavLink className="PhraseNameLink" to={`/phrases/${phrase.id}`}>
                                             <div>
-                                            <h3 className="PhraseName">{phrase.title}</h3>
+                                            <p className="PhraseName">{phrase.title}</p>
                                             </div>
 
                                         </NavLink>

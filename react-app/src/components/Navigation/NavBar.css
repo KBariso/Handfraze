@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    /* position: relative; */
+    /* position: absolute; */
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 0;
@@ -23,6 +23,11 @@
     justify-content: center;
     width: 80%;
     height: 95%;
+    text-decoration: none;
+}
+active.HandfrazeLogo {
+    text-decoration: none;
+    background-color: none;
 }
 
 .SignupLogout {

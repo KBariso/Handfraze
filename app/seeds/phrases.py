@@ -47,7 +47,7 @@ def seed_phrases():
     )
     please = Phrase(
         title = "Please",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'please' in ASL",
         media_url = "https://www.youtube.com/embed/DlhDMMZlbgk",
         category_id = 1
@@ -68,14 +68,14 @@ def seed_phrases():
     )
     meet = Phrase(
         title = "Nice To Meet You",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'Nice to meet you' in ASL",
         media_url = "https://www.youtube.com/embed/XepcP9GeVps",
         category_id = 2
     )
     howareyou = Phrase(
         title = "How are you?",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'How are you?' in ASL",
         media_url = "https://www.youtube.com/embed/GOV6KwltGQk",
         category_id = 2
@@ -117,14 +117,14 @@ def seed_phrases():
     )
     sorry = Phrase(
         title = "I am sorry",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'I am sorry' in ASL",
         media_url = "https://www.youtube.com/embed/bS-_Jedkr-I",
         category_id = 1
     )
     ihelp = Phrase(
         title = "I need help",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'I need help' in ASL",
         media_url = "https://www.youtube.com/embed/D-2aQXUKDd8",
         category_id = 1
@@ -145,14 +145,14 @@ def seed_phrases():
     )
     what = Phrase(
         title = "What",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'What' in ASL",
         media_url = "https://www.youtube.com/embed/tJnWUR_0k8Q",
         category_id = 6
     )
     when = Phrase(
         title = "When",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'When' in ASL",
         media_url = "https://www.youtube.com/embed/5E14bSXmjbE",
         category_id = 6
@@ -187,7 +187,7 @@ def seed_phrases():
     )
     thirsty = Phrase(
         title = "I am Thirsty",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'I am thirsty' in ASL",
         media_url = "https://www.youtube.com/embed/TQ2LxOXvXsA",
         category_id = 3
@@ -208,7 +208,7 @@ def seed_phrases():
     )
     cold = Phrase(
         title = "Cold",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'Cold' in ASL",
         media_url = "https://www.youtube.com/embed/IvPGcQF1pLQ",
         category_id = 6
@@ -222,7 +222,7 @@ def seed_phrases():
     )
     numbers = Phrase(
         title = "Numbers 1-10",
-        user_id = 1,
+        user_id = 2,
         description = "How to sign 'Numbers 1-10' in ASL",
         media_url = "https://www.youtube.com/embed/85OZp-1mkZU",
         category_id = 1

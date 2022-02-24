@@ -33,7 +33,7 @@ const NavBar = () => {
       <nav>
       <div className='navbar'>
         <div>
-          <NavLink to='/' exact={true} activeClassName='active'>
+          <NavLink to='/' exact={true} activeClassName='HandfrazeLogo'>
           <img className="HandfrazeLogo" src={logo}/>
           </NavLink>
         </div>

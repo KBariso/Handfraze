@@ -9,3 +9,9 @@
     border-radius: 5px;
     /* background-color: beige; */
 }
+
+.commentsHeader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}

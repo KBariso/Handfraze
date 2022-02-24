@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { createPhrase } from "../../store/phrases";
 import { getAllCategories } from "../../store/categories";
+import logo from './images/CREATE.png'
 import logo1 from './images/Title.PNG'
 import logo2 from './images/Description.PNG'
 import logo3 from './images/Media.PNG'
@@ -85,7 +86,12 @@ const CreateNewPhrase = () => {
 
   return (
     <>
-      <h1 className="CreateAPhraseHeader">CREATE A PHRASE</h1>
+    <div className="CreateLogoContainer">
+      <img className="CreateLogo" src={logo}/>
+      <h1 className="CreateAPhraseHeader">Create a Phrase</h1>
+    </div>
+    <div className="AllInputsContainer">
+
       <form className="formContainer" onSubmit={handleSubmit}>
         <div className="PhraseInputsContainer">
           {errors.length > 0 && (
@@ -113,6 +119,14 @@ const CreateNewPhrase = () => {
               onChange={updateDescription}
             />
           </div>
+                <div className="SubmitCreateContainer">
+                    <button className="SubmitCreate" type="submit">Submit</button>
+                </div>
+
+
+            </div>
+          <div className="CreateCategoriesContainer">
+
           <div className="CreateMediaContainer">
           <img className="MediaLogo" src={logo3}/>
             <input className="CreateMedia"
@@ -122,10 +136,6 @@ const CreateNewPhrase = () => {
               onChange={updateMedia}
             />
           </div>
-            <button type="submit">Submit</button>
-
-            </div>
-          <div className="CreateCategoriesContainer">
           <img className="CategoryLogo" src={logo4}/>
             {categoriesObj &&
               <select onChange={updateCategory} >
@@ -139,6 +149,7 @@ const CreateNewPhrase = () => {
 
 
       </form>
+    </div>
     </>
   );
 };
