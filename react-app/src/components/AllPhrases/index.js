@@ -21,9 +21,9 @@ const AllPhrases = () => {
     }, [dispatch]);
 
 
-    const [showFirstTab, setShowFirstTab] = useState(true);
+    const [showFirstTab, setShowFirstTab] = useState(false);
     const [showSecondTab, setShowSecondTab] = useState(false);
-    const [showThirdTab, setShowThirdTab] = useState(false);
+    const [showThirdTab, setShowThirdTab] = useState(true);
 
     const openFirstTab = () => {
         if (showFirstTab) return;
@@ -96,7 +96,12 @@ const AllPhrases = () => {
 
             <div className="AboutContainer">
                 <div className="AboutInnerContainer">
-                                    <div className="InfoChoices">
+                <div className="InfoChoices">
+                    <div className="About" >
+                    {/* <button class="tablinks" onClick={openThirdTab}>About</button> */}
+                        <input type="radio1" value="About" name="test" id="radio1" className="radio1" onClick={openThirdTab}/>
+                        <label className="radio1Label" for="radio1">About</label>
+                    </div>
                     <div className="ImportanceASL">
                     {/* <button class="tablinks" onClick={openFirstTab} id="defaultOpen">Importance of ASL</button> */}
                         <input type="radio3" value="Importance" name="test" id="radio3" className="radio3" onClick={openFirstTab} defaultChecked/>
@@ -107,11 +112,6 @@ const AllPhrases = () => {
                         <input type="radio2" value="Learn" name="test" id="radio2" className="radio2" onClick={openSecondTab}/>
                         <label className="radio2Label" for="radio2">Learn</label>
                     </div>
-                    <div className="About" >
-                    {/* <button class="tablinks" onClick={openThirdTab}>About</button> */}
-                        <input type="radio1" value="About" name="test" id="radio1" className="radio1" onClick={openThirdTab}/>
-                        <label className="radio1Label" for="radio1">About</label>
-                    </div>
                 </div>
 
                 <hr className="linebreak"/>
@@ -119,21 +119,21 @@ const AllPhrases = () => {
                 {showFirstTab && (
                     <div className="tabcontent1" id="Importance">
                         <h2 className="firstTabContainer"> Importance </h2>
-                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-                             <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                             <p>ASL is used by Deaf and Hard of Hearing Americans in all places of business and education. ASL is America's most modern naturally-born language, yet is not always recognized as an official language.</p>
+                             <p>ASL helps us be inclusive but is also a helpful tool to communicate in loud places, at long distances, or privately. Above all, learning ASL makes for a more equitable world.</p>
                     </div>
                 )}
                 {showSecondTab && (
                     <div className="tabcontent2" id="Learn">
                         <h2 className="secondTabContainer">Learn</h2>
-                        <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>American Sign Language is a language that developed from Native American signs, French Sign Language, and Martha's Vineyard Sign Language by Deaf Americans. </p>
+                        <p>ASL is language separate from English, having its own grammar structure and means of explaining thoughts and feelings. ASL use by Deaf people in America is a cultural pillar, necessary to understand the intricacies of Deaf Culture. </p>
                     </div>
                 )}
                 {showThirdTab && (
                     <div className="tabcontent3" id="About">
                         <h2 className="thirdTabContainer">About</h2>
-                    <p>Excepteur sint</p> <p>occaecat cupidatat non proident,</p>  sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p>Handfraze is a clone of Handspeak, a resource to the American Sign Language (ASL) dictionary.</p> <p>Like Handspeak, Handfraze allows a resource for individuals who wish to learn basic ASL phrases from a certified national interpreter.</p>
                     </div>
                 )}
                 </div>

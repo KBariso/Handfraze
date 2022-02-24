@@ -22,7 +22,7 @@
 
 
 .tabcontent1 {
-    margin: 10px;
+    /* margin: 10px; */
     padding-bottom: 5px;
     background-color: #9AD0EC;
     /* color: whitesmoke; */
@@ -31,7 +31,7 @@
 }
 
 .tabcontent2 {
-    margin: 10px;
+    /* margin: 10px; */
     padding-bottom: 5px;
     background-color: #9AD0EC;
     /* color: whitesmoke; */
@@ -40,7 +40,7 @@
 }
 
 .tabcontent3 {
-    margin: 10px;
+    /* margin: 10px; */
     margin-bottom: 10px;
     background-color: #9AD0EC;
     /* color: whitesmoke; */
@@ -221,8 +221,8 @@
 .HomepageContainer {
     display: flex;
     justify-content: space-around;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 24%;
+    margin-right: 24%;
 }
 
 .WeekPhraseContainer {
