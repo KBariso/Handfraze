@@ -23,6 +23,11 @@
     justify-content: center;
     width: 80%;
     height: 95%;
+    text-decoration: none;
+}
+active.HandfrazeLogo {
+    text-decoration: none;
+    background-color: none;
 }
 
 .SignupLogout {

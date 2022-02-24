@@ -1,0 +1,11 @@
+.LoginandDemoButton {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.LoginUserEmail {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 15px;
+}

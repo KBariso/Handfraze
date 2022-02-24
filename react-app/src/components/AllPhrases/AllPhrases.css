@@ -1,7 +1,7 @@
 .AboutContainer {
     /* display: flex; */
     justify-self: center;
-    background-color: #9AD0EC;
+    /* background-color: #9AD0EC; */
     /* margin-left: 20%;
     margin-right: 20%;
     border-radius: 10px;
@@ -24,8 +24,8 @@
 .tabcontent1 {
     margin: 10px;
     padding-bottom: 5px;
-    background-color: #0F7173;
-    color: whitesmoke;
+    background-color: #9AD0EC;
+    /* color: whitesmoke; */
     padding: 5px;
     border-radius: 3px;
 }
@@ -33,7 +33,7 @@
 .tabcontent2 {
     margin: 10px;
     padding-bottom: 5px;
-    /* background-color: #726E75; */
+    background-color: #9AD0EC;
     /* color: whitesmoke; */
     padding: 5px;
     border-radius: 3px;
@@ -42,8 +42,8 @@
 .tabcontent3 {
     margin: 10px;
     margin-bottom: 10px;
-    background-color: #0F7173;
-    color: whitesmoke;
+    background-color: #9AD0EC;
+    /* color: whitesmoke; */
     padding: 5px;
     border-radius: 3px;
 }
@@ -76,18 +76,18 @@
 
 
 .radio3Label {
+    background-color: #9AD0EC;
+    /* color: whitesmoke; */
     cursor: pointer;
-    background-color: #0F7173;
-    color: whitesmoke;
     padding: 5px;
     border-radius: 3px;
-    /* background-color: red; */
 }
 
 .radio3Label:hover {
     cursor: pointer;
-    border-color: #0F7173 solid 1px;
-    /* background-color: #ffa500; */
+    background-color: inherit;
+    color: black;
+    border: black 1px solid;
 }
 
 /* .radio3Label::selection {
@@ -95,34 +95,37 @@
 } */
 
 .active {
-    background-color: orange;
+    background-color: #6ac1e6;
+    border-radius: 5px;
     cursor: pointer;
-
+    border:solid 1px rgb(39, 34, 34)
 }
+
 
 /* .active1:focus {
     background-color: blueviolet;
 } */
 
 .firstTabContainer {
-    background-color: #0F7173;
-    color: whitesmoke;
+    background-color: #9AD0EC;
+    /* color: whitesmoke; */
     border-radius: 5px;
-    padding: 10px;
     margin: 0;
+    padding: 0;
 }
 
 .secondTabContainer {
-    /* background-color: #ffa500; */
+    background-color: #9AD0EC;
+    /* color: whitesmoke; */
     border-radius: 5px;
-    padding: 10px;
     margin: 0;
+    padding: 0;
 }
 
 
 .thirdTabContainer {
-    background-color: #0F7173;
-    color: whitesmoke;
+    background-color: #9AD0EC;
+    /* color: whitesmoke; */
     border-radius: 5px;
     margin: 0;
 }
@@ -130,8 +133,9 @@
 
 .radio2Label {
     cursor: pointer;
-    background-color: #ffa500;
+    background-color: #9AD0EC;
     /* border-color: #0F7173 solid 1px; */
+    cursor: pointer;
     padding: 5px;
     border-radius: 3px;
 
@@ -139,12 +143,14 @@
 
 .radio2Label:hover {
     cursor: pointer;
-    background-color: none;
+    background-color: inherit;
+    color: black;
+    border: black 1px solid;
 }
 
 .radio1Label {
-    background-color: #0F7173;
-    color: whitesmoke;
+    background-color: #9AD0EC;
+    /* color: whitesmoke; */
     cursor: pointer;
     padding: 5px;
     border-radius: 3px;
@@ -161,7 +167,6 @@
 
 .ImportanceASL {
     /* background-color: aqua; */
-
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -173,20 +178,38 @@
 
 
 .CreateContainer {
+    display: flex;
+    margin-top: 10%;
+    text-decoration: none;
+    color: black;
+    margin-top: 0;
+}
+
+.APhrase:hover {
+    background-color: #82c1df;
+    font-size: larger;
+    /* box-shadow: ; */
+}
+
+
+.APhrase {
     display:flex;
     flex-direction: column;
     align-items: center;
     width: fit-content;
     height: fit-content;
     /* padding-bottom: 50px; */
-    border: solid black 3px;
+    border: solid black 1px;
     margin-top: 10px;
     background-color: #9AD0EC;
     border-radius: 5px;
+    width: 87%;
+    text-decoration: none;
 }
-.APhrase {
-    display: flex;
-    margin-top: 10%;
+
+
+.PhraseTitle {
+
 }
 
 .CreateLogo {
@@ -211,9 +234,9 @@
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    border: solid 3px black;
+    border: solid 1px black;
     width:80%;
-    height:85%
+    height:70%
 }
 
 .linebreak {
@@ -229,12 +252,18 @@
     align-items: center;
     justify-content: center;
     background-color: #f7f7f7;
+    border-radius: 5px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
     width:45%
 }
 
-.WeekPhrase {
+.PhraseNameLink {
+    text-decoration: none;
+    color: rgb(39, 34, 34);
+}
 
+.PhraseNameLink:hover {
+    background-color: #82c1df;
 }

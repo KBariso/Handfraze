@@ -19,6 +19,22 @@
   }
 
   #modal-content {
+    display: flex;
     position: absolute;
-    background-color:white;
+    background-color:#9AD0EC;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 25%;
+    border-radius: 5px;
   }
+
+.input-parent {
+  display: flex;
+  padding-top: 15px;
+  justify-content: flex-end;
+}
+
+.input-login {
+
+}

@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect, useHistory } from 'react-router-dom';
 import { login } from '../../store/session';
+import './LoginFormModal.css';
 
 const LoginForm = () => {
   const [errors, setErrors] = useState([]);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  
+
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -48,7 +49,7 @@ const LoginForm = () => {
           <div key={ind}>{error}</div>
         ))}
       </div>
-      <div>
+      <div className='LoginUserEmail'>
         <label htmlFor='email'>Email</label>
         <input
           name='email'
@@ -58,7 +59,7 @@ const LoginForm = () => {
           onChange={updateEmail}
         />
       </div>
-      <div>
+      <div className='UserLoginPassword'>
         <label htmlFor='password'>Password</label>
         <input
           name='password'
@@ -67,10 +68,12 @@ const LoginForm = () => {
           value={password}
           onChange={updatePassword}
         />
-        <button type='submit'>Login</button>
-        <button type="submit" onClick={demoLogin}>
-          User Demo Login
-        </button>
+        <div className='LoginandDemoButton'>
+          <button type='submit'>Login</button>
+          <button type="submit" onClick={demoLogin}>
+            User Demo Login
+          </button>
+        </div>
       </div>
     </form>
   );

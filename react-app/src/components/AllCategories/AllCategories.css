@@ -2,6 +2,7 @@
     display: flex;
     justify-content:center;
     background-color: #f7f7f7;
+    border-radius: 5px;
     width: 45%;
     padding-bottom: 15px;
 
@@ -13,24 +14,23 @@
     flex-direction: column;
     /* justify-content: space-around; */
     background-color: #9AD0EC;
-
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: 5px;
-    border: solid 3px black
+    border: solid 1px black
 }
 
 .CategoryContainer button {
     background-color: inherit;
-    font-size: large;
+    font-size: medium;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
 
 
 .CategoriesHeader {
@@ -54,7 +54,7 @@
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    border: solid 3px black
+    border: solid 1px black
 }
 
 .CategoryName {
@@ -64,13 +64,14 @@
 }
 
 .CategoryName:hover{
-    background-color:rgba(255, 170, 0, 0.63);
+    background-color:#6ac1e6;
     border-radius: 5px;
 }
 
 .CategoryName:focus{
-    background-color:#ffa500;
+    background-color:#6ac1e6;
     border-radius: 5px;
+    border:solid 1px rgb(39, 34, 34)
 }
 
 .PhraseName {

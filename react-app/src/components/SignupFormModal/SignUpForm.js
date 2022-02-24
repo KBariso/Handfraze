@@ -98,6 +98,8 @@ const SignUpForm = () => {
   }
 
   return (
+    <div className='LoginFormContainer'>
+
     <form className='loginForm' onSubmit={onSignUp}>
       <div>
         {errors.map((error, ind) => (
@@ -145,11 +147,15 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
+      <div className='ModalSignupDemo'>
+
       <button className='buttonLogin'type='submit'>Sign Up</button>
        <button className='demoButtonLogin'type="submit" onClick={demoLogin}>
                     User Demo Login
                 </button>
+      </div>
     </form>
+    </div>
   );
 };
 
