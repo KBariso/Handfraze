@@ -2,6 +2,8 @@
 
 
 ## About Handfraze
+Live Link: https://handfraze.herokuapp.com/
+
 
 Handfraze is a clone of Handspeak, a resource to the American Sign Language (ASL) dictionary. Like Handspeak, Handfraze allows a resource for individuals who wish to learn basics of ASL providing basic phrases in video form from a certified national interpreter. Logged in users are able to create phrases with videos or create comments to phrases that have already been created.
 
