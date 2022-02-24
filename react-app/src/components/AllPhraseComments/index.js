@@ -40,7 +40,7 @@ const PhraseComments = ({phraseId, hideForm}) => {
       return (
         <div className="commentsContainer">
 
-            <h1 className="commentsHeader">All comments</h1>
+            <h2 className="commentsHeader">All comments</h2>
             {/* {!edit && <button onClick={() => setEdit(!edit)}>Edit Comment</button>} */}
 
 
