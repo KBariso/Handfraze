@@ -3,7 +3,7 @@
 
 ## About Handfraze
 
-Handfraze is a clone of Handspeak, a resource to the American Sign Language (ASL) dictionary. Like Handspeak, Handfraze allows a resource for individuals who wish to learn basics of ASL providing basic phrases in video form from a certified national interpreter. Logged in users are able to create phrases to post videos or create comments to phrases that are already created.
+Handfraze is a clone of Handspeak, a resource to the American Sign Language (ASL) dictionary. Like Handspeak, Handfraze allows a resource for individuals who wish to learn basics of ASL providing basic phrases in video form from a certified national interpreter. Logged in users are able to create phrases with videos or create comments to phrases that have already been created.
 
 
 ### Technologies Used Backend:
