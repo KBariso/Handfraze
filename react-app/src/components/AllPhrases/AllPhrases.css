@@ -199,7 +199,7 @@
     width: fit-content;
     height: fit-content;
     /* padding-bottom: 50px; */
-    border: solid black 1px;
+    /* border: solid black 1px; */
     margin-top: 10px;
     background-color: #9AD0EC;
     border-radius: 5px;
@@ -234,7 +234,7 @@
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    border: solid 1px black;
+    /* border: solid 1px black; */
     width:80%;
     height:70%
 }
