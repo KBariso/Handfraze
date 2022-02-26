@@ -37,7 +37,7 @@ const CreateNewPhrase = () => {
 
   const updateTitle = (e) => setTitle(e.target.value);
   const updateDescription = (e) => setDescription(e.target.value);
-  const updateMedia = (e) => setMedia(e.target.value);
+  const updateMedia = (e) => setMedia(e.target.value.replace('.be/', 'be.com/embed/'));
   const updateCategory = (e) => setCategory(e.target.value)
 
   // if (!user) return <Redirect to="/" />;
