@@ -88,6 +88,8 @@ const EditPhrase = ({phraseProp, hideForm}) => {
           setErrors(["Your description is too long!"]);
         }else if (!category.length) {
           setErrors(["Please select a category"]);
+        } else if (!media.length) {
+          setErrors(["You have no video!"]);
         } else {
           setErrors([]);
 
