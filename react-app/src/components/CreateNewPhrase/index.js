@@ -68,12 +68,7 @@ const CreateNewPhrase = () => {
       setErrors(["Please select a category"]);
     } else if (!media.length) {
       setMedia("https://play-lh.googleusercontent.com/4UPSnZVYh4pEeD85XXUAi3Lhdfuw54rGD2kcy--BA8t86Zuua1NpLQxUeVS7QzUZ91g");
-    } else if (media.length) {
-      const embedRex = /embed/;
-      if (!embedRex.test(media)) {
-        setErrors(["Please enter a valid Embeded URL"]);
-      }
-    }  else {
+    } else {
       setErrors([]);
 
     let createdPhrase = await dispatch(createPhrase(payload))
