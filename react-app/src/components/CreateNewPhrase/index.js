@@ -53,7 +53,7 @@ const CreateNewPhrase = () => {
         category_id: category
     };
 
-
+    const embedRex = /embed/;
     if (!title) {
       setErrors(["Please enter a title"]);
     } else if (title.length < 2) {
@@ -68,6 +68,8 @@ const CreateNewPhrase = () => {
       setErrors(["Please select a category"]);
     } else if (!media.length) {
       setMedia("https://play-lh.googleusercontent.com/4UPSnZVYh4pEeD85XXUAi3Lhdfuw54rGD2kcy--BA8t86Zuua1NpLQxUeVS7QzUZ91g");
+    } else if (!embedRex.test(media)) {
+     setErrors(["Please enter a valid Embeded URL"])
     } else {
       setErrors([]);
 
