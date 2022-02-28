@@ -2,29 +2,33 @@
     display: flex;
     /* position: absolute; */
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-top: 0;
     left: 0;
     right: 0;
     margin-bottom: 2px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .HandfrazeLogoContainer {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     margin-top: 5px;
+
+
 }
 
 
 .HandfrazeLogo {
     display: flex;
-    justify-content: center;
-    width: 80%;
-    height: 95%;
+    /* justify-content: center; */
+    /* margin-right: 0; */
+    width: 85%;
+    height: 100%;
     text-decoration: none;
 }
+
 active.HandfrazeLogo {
     text-decoration: none;
     background-color: none;

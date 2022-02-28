@@ -69,8 +69,8 @@ const LoginForm = () => {
           onChange={updatePassword}
         />
         <div className='LoginandDemoButton'>
-          <button type='submit'>Login</button>
-          <button type="submit" onClick={demoLogin}>
+          <button className='ModalLoginSubmit' type='submit'>Login</button>
+          <button className='demoButtonLogin' type="submit" onClick={demoLogin}>
             User Demo Login
           </button>
         </div>

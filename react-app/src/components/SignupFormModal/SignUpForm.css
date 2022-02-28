@@ -3,3 +3,59 @@
     justify-content: space-evenly;
     padding-top: 15px;
   }
+
+.SignupNonUser {
+  margin-left: 10px;
+  background-color: #232423; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.SignupNonUser:hover {
+  background-color: white;
+  color:#232423
+}
+
+
+.buttonLogin {
+  margin-left: 10px;
+  background-color: #232423; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.buttonLogin:hover {
+  background-color: white;
+  color:#232423
+}
+
+
+.demoButtonLogin {
+  margin-left: 10px;
+  background-color: #232423; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.demoButtonLogin:hover {
+  background-color: white;
+  color:#232423
+}

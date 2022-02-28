@@ -140,7 +140,7 @@ const SignUpForm = () => {
       <div className='ModalSignupDemo'>
 
       <button className='buttonLogin'type='submit'>Sign Up</button>
-       <button className='demoButtonLogin'type="submit" onClick={demoLogin}>
+       <button className='demoButtonLogin' type="submit" onClick={demoLogin}>
                     User Demo Login
                 </button>
       </div>

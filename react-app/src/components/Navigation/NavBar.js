@@ -32,7 +32,7 @@ const NavBar = () => {
     sessionLinks = (
       <nav>
       <div className='navbar'>
-        <div>
+        <div className='HandfrazeLogoContainer'>
           <NavLink to='/' exact={true} activeClassName='HandfrazeLogo'>
           <img className="HandfrazeLogo" src={logo}/>
           </NavLink>

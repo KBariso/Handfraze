@@ -11,4 +11,37 @@
 }
 .LoginHomePage {
     margin-left: 10px;
+    background-color: #232423; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+
+.LoginHomePage:hover {
+    background-color: white;
+    color:#232423
+}
+
+
+.ModalLoginSubmit {
+    margin-left: 10px;
+    background-color: #232423; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.ModalLoginSubmit:hover {
+    background-color: white;
+    color:#232423
 }
