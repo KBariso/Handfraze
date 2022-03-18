@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, request
 from app.models import db, Phrase, Category
 from app.forms.phrases import NewPhrase
 from flask_login import current_user, login_required
+import click
 
 
 phrases = Blueprint(
@@ -69,7 +70,6 @@ def phrase_form_submit():
     # print("I AM HERE!!!")
 
     if form.validate_on_submit():
-        print("IN THE IF STATEMENT!!!")
         data = form.data
         new_phrase = Phrase(title = data["title"],
                             description = data["description"],
@@ -79,7 +79,8 @@ def phrase_form_submit():
                             )
         db.session.add(new_phrase)
         db.session.commit()
-        print(new_phrase.to_dict(), "NEW PHRASE")
+
+        click.echo(click.style("new_phrase.to_dict(),", bg='red', fg='white'))
         return new_phrase.to_dict()
 
     else:
