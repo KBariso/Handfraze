@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect, useState } from "react";
 import { useParams, Link, NavLink } from "react-router-dom";
 import AllCategories from "../AllCategories";
+// import ReactDOM from "react-dom";
 // import logo from './images/CREATE.png'
 import './AllPhrases.css'
 import Footer from "../Footer";
@@ -76,6 +77,16 @@ const AllPhrases = () => {
         return () => document.removeEventListener("click", closeThirdTab);
       }, [showThirdTab]);
 
+
+
+        // const [selected, setSelected] = useState("");
+        // console.log(selected)
+        // const changeHandler = e => {
+        //   setSelected(e.target.value);
+        // };
+
+
+
       let sessionLinks;
 
       if (user) {
@@ -93,6 +104,36 @@ const AllPhrases = () => {
         //     </div>
         //   </nav>
         <>
+{/*
+<div className="App">
+      <h1>Radio Button check/uncheck show hide div</h1>
+      <input
+        type="radio"
+        name="gender"
+        value="male"
+        id="male"
+        checked={selected === "male"}
+        onChange={changeHandler}
+      />
+      <label htmlFor="male">Male</label>
+      <div aria-hidden={selected !== "male" ? true : false}>
+        This is male Div
+      </div>
+
+      <input
+        type="radio"
+        value="female"
+        id="female"
+        checked={selected === "female"}
+        name="gender"
+        onChange={changeHandler}
+      />
+      <label htmlFor="female">Female</label>
+      <div aria-hidden={selected !== "female" ? true : false}>
+        This is female Div
+      </div>
+    </div> */}
+
 
             <div className="AboutContainer">
                 <div className="AboutInnerContainer">
@@ -101,6 +142,8 @@ const AllPhrases = () => {
                     {/* <button class="tablinks" onClick={openThirdTab}>About</button> */}
                         <input type="radio1" value="About" name="test" id="radio1" className="radio1" onClick={openThirdTab}/>
                         <label className="radio1Label" for="radio1">About</label>
+
+
                     </div>
                     <div className="ImportanceASL">
                     {/* <button class="tablinks" onClick={openFirstTab} id="defaultOpen">Importance of ASL</button> */}

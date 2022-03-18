@@ -55,7 +55,7 @@ const AllCategories = ({phraseProp}) => {
                     <div>
                         <div>
 
-                        <h3 className="PhrasesHeader">Phrases Available</h3>
+                        <h3 className="PhrasesHeader"> Available Phrases</h3>
                         <div className="PhrasesContainer">
 
                             {phrases.map((phrase) => {
