@@ -14,6 +14,11 @@ import SinglePhrasePage from './components/SinglePhrasePage';
 import CreateNewPhrase from './components/CreateNewPhrase';
 import EditPhrase from './components/EditPhrase';
 import PhraseComments from './components/AllPhraseComments';
+import About from './components/About';
+import Importance from './components/Importance';
+import Learn from './components/Learn';
+import Labels from './components/InfoLabels';
+
 import './index.css'
 
 function App() {
@@ -35,7 +40,17 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route path='/' exact={true}>
+        <Route path='/home'>
+          <Labels />
+            <Route path='/home/about' exact={true}>
+              <About />
+            </Route>
+            <Route path='/home/importance' exact={true}>
+              <Importance />
+            </Route>
+            <Route path='/home/learn' exact={true}>
+              <Learn />
+            </Route>
           <AllPhrases />
         </Route>
 

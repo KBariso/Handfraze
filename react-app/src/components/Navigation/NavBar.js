@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import LogoutButton from '../auth/LogoutButton';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
@@ -15,32 +15,31 @@ const NavBar = () => {
 
   if (user) {
     sessionLinks = (
-      <nav>
-        <div className='navbar'>
-          <div className='HandfrazeLogoContainer'>
-            <NavLink to='/' exact={true} activeClassName='HandfrazeLogo'>
-            <img className="HandfrazeLogo" src={logo}/>
-            </NavLink>
-          </div>
-          <div className='LogoutButtonContainer'>
-            <LogoutButton />
-          </div>
+      <>
+                <div className="nav-bar-container-light">
+        <NavLink to='/home/about' exact={true} activeClassName='HandfrazeLogo'>
+          <img
+            src={logo}
+            className="website-logo"
+            alt="website logo"
+          />
+        </NavLink>
+        <LogoutButton />
         </div>
-      </nav>
+      </>
     )
   } else {
     sessionLinks = (
       <nav>
-      <div className='navbar'>
-        <div className='HandfrazeLogoContainer'>
-          <NavLink to='/' exact={true} activeClassName='HandfrazeLogo'>
-          <img className="HandfrazeLogo" src={logo}/>
-          </NavLink>
-        </div>
+                <div className="nav-bar-container-light">
+        <NavLink to='/home/about' exact={true} activeClassName='HandfrazeLogo'>
+          <img
+            src={logo}
+            className="website-logo"
+            alt="website logo"
+          />
+        </NavLink>
         <div className="SignupLogout" >
-          {/* <NavLink to='/sign-up' exact={true} activeClassName='active'>
-            Sign Up
-          </NavLink> */}
           <div className='SignUpFormModalContainer'>
             <SignupFormModal />
           </div>
@@ -52,9 +51,7 @@ const NavBar = () => {
       </div>
   </nav>
     )
-
   }
-
   return (
     <>{sessionLinks}</>
   );
