@@ -45,7 +45,10 @@
     display: flex;
     position: flex;
     margin-bottom: 0;
+    padding-left: 5px;
 }
+
+
 
 .PhrasesContainer {
     display: flex;
@@ -55,6 +58,7 @@
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: 15px;
     /* border: solid 1px black */
 }
 

@@ -90,6 +90,7 @@
     cursor: pointer;
     padding: 5px;
     border-radius: 3px;
+    font-size: large;
 }
 
 .radio3Label:hover {
@@ -150,6 +151,7 @@
     cursor: pointer;
     padding: 5px;
     border-radius: 3px;
+    font-size: large;
 
 }
 
@@ -162,10 +164,10 @@
 
 .radio1Label {
     background-color: #9AD0EC;
-    /* color: whitesmoke; */
     cursor: pointer;
     padding: 5px;
     border-radius: 3px;
+    font-size: large;
 }
 
 .radio1Label:hover {

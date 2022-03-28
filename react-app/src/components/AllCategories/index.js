@@ -62,7 +62,7 @@ const AllCategories = ({phraseProp}) => {
                                 if (selectedPhrase === phrase.category_id){
                                     return (
                                         <NavLink className="PhraseNameLink" to={`/phrases/${phrase.id}`}>
-                                            <div>
+                                            <div className="PhraseNameContainer">
                                             <p className="PhraseName">{phrase.title}</p>
                                             </div>
 
