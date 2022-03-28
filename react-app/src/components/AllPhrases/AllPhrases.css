@@ -121,8 +121,8 @@
     padding-left: 15px;
     padding-right: 15px;
     /* border: solid 1px black; */
-    width:80%;
-    height:70%
+    width:fit-content;
+    height:fit-content;
 }
 
 .linebreak {
