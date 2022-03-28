@@ -1,0 +1,16 @@
+.tabcontent2 {
+    margin-bottom: 10px;
+    background-color: #9AD0EC;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.secondTabContainer {
+    background-color: #9AD0EC;
+    /* color: whitesmoke; */
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}

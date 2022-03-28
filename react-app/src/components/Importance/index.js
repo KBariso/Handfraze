@@ -1,3 +1,5 @@
+import './importance.css'
+
 const Importance = () => {
     return (
         <>

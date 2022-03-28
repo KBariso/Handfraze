@@ -1,35 +1,20 @@
-// import { getAllCategoryPhrases } from "../../store/phrases";
 import { getAllCategories } from "../../store/categories";
-import { getAllPhrases } from "../../store/phrases";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './AllCategories.css'
 
 
 const AllCategories = ({phraseProp}) => {
     const dispatch = useDispatch()
     const categoriesObj = useSelector((state) => state.categories)
-    // console.log(categoriesObj)
-    console.log(phraseProp, "I AM THE PHRASEPROP")
     const phrases = Object.values(phraseProp)
-    // console.log(phrases, "I AM THE PHRASES")
-    const categories = Object.values(categoriesObj)
-    // console.log(categories, "I AM THE CATEGORIES")
-    // const categoryTitles = categories.filter((category) => category.id === )
 
+    const categories = Object.values(categoriesObj)
 
     const [selectedPhrase, setSelectedPhrase] = useState(1)
-    console.log(selectedPhrase)
 
 
-
-
-
-
-    // useEffect(() => {
-    //     dispatch(getAllCategoryPhrases());
-    //  }, [dispatch]);
 
     useEffect(() => {
        dispatch(getAllCategories());
@@ -65,7 +50,6 @@ const AllCategories = ({phraseProp}) => {
                                             <div className="PhraseNameContainer">
                                             <p className="PhraseName">{phrase.title}</p>
                                             </div>
-
                                         </NavLink>
 
                                     )

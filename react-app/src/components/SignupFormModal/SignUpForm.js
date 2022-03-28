@@ -64,7 +64,7 @@ const SignUpForm = () => {
     const email = "demo@aa.io";
     const password = "password";
     dispatch(login(email, password));
-    history.push("/")
+    history.push("/home/about")
   }
 
   const updateUsername = (e) => {
@@ -84,7 +84,7 @@ const SignUpForm = () => {
   };
 
   if (user) {
-    return <Redirect to='/' />;
+    return <Redirect to='/home' />;
   }
 
   return (
