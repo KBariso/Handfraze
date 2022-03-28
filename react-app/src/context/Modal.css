@@ -24,9 +24,10 @@
     background-color:#9AD0EC;
     justify-content: center;
     align-items: center;
-    height: 30%;
-    width: 25%;
+    height: auto;
+    width: auto;
     border-radius: 5px;
+    padding: 20px;
   }
 
 .input-parent {

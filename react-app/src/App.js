@@ -59,12 +59,11 @@ function App() {
               <Learn />
               <AllPhrases />
             </Route>
-        <ProtectedRoute path='/phrases/new' exact={true}>
+        {/* <ProtectedRoute path='/phrases/new' exact={true}>
         <Route path='/phrases/new' exact={true}>
           <CreateNewPhrase />
-        {/* <AllPhrases /> */}
         </Route>
-        </ProtectedRoute>
+        </ProtectedRoute> */}
         <Route path='/phrases/:phraseId' exact={true}>
           <SinglePhrasePage />
         </Route>

@@ -12,6 +12,7 @@
 .secondTabContainer {
     background-color: #9AD0EC;
     /* color: whitesmoke; */
+    /* height: 10%; */
     border-radius: 5px;
     margin: 0;
     padding: 0;
@@ -21,6 +22,7 @@
     width: 50%;
     margin-top: 2%;
     margin-right: 2%;
+    
 }
 
 .MarthasVineyard {

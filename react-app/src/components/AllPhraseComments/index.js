@@ -37,7 +37,15 @@ const PhraseComments = ({phraseId, hideForm}) => {
       });
     //   console.log(comments)
 
-      return (
+    let sessionLinks;
+
+    if (comments.length === 0) {
+      sessionLinks = (
+        <>
+        </>
+      )
+    } else {
+      sessionLinks = (
         <div className="commentsContainer">
 
             <h2 className="commentsHeader">All comments</h2>
@@ -51,9 +59,14 @@ const PhraseComments = ({phraseId, hideForm}) => {
               );
             })}
           </div>
-
         </div>
+      )
+    }
 
+
+
+      return (
+        <>{sessionLinks}</>
       );
 
 

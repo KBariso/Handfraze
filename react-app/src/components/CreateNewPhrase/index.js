@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { createPhrase } from "../../store/phrases";
 import { getAllCategories } from "../../store/categories";
-import logo from './images/CREATE.png'
 import logo1 from './images/Title.PNG'
 import logo2 from './images/Description.PNG'
 import logo3 from './images/Media.PNG'
@@ -81,7 +80,8 @@ const CreateNewPhrase = () => {
     setDescription("")
     setMedia("")
       if (createdPhrase) {
-        history.push(`/`);
+        history.push(`/about`);
+        window.location.reload()
       }
     }
     // console.log(createPhrase)
@@ -92,10 +92,11 @@ const CreateNewPhrase = () => {
 
   return (
     <>
+    <div className="InputsandSubmit">
     <div className="CreateLogoContainer">
-      <img className="CreateLogo" src={logo}/>
       <h1 className="CreateAPhraseHeader">Create a Phrase</h1>
     </div>
+
     <div className="AllInputsContainer">
 
       <form className="formContainer" onSubmit={handleSubmit}>
@@ -116,32 +117,18 @@ const CreateNewPhrase = () => {
               onChange={updateTitle}
             />
           </div>
-          <div className="CreateDescriptionContainer">
-          <img className="DescriptionLogo" src={logo2}/>
-            <textarea className="CreateDescription"
-              placeholder="Description"
-              type="text"
-              value={description}
-              onChange={updateDescription}
-            />
-          </div>
-                <div className="SubmitCreateContainer">
-                    <button className="SubmitCreate" type="submit">Submit</button>
-                </div>
-
-
-            </div>
-          <div className="CreateCategoriesContainer">
-
-          <div className="CreateMediaContainer">
           <img className="MediaLogo" src={logo3}/>
             <input className="CreateMedia"
               placeholder="Media - Image/Embedded URL"
               type="text"
               value={media}
               onChange={updateMedia}
-            />
-          </div>
+              />
+              </div>
+
+          <div className="CreateCategoriesContainer">
+          <div className="CreateMediaContainer">
+
           <img className="CategoryLogo" src={logo4}/>
             {categoriesObj &&
               <select onChange={updateCategory} >
@@ -151,10 +138,26 @@ const CreateNewPhrase = () => {
                   })}
               </select>
             }
+                      <div className="CreateDescriptionContainer">
+          <img className="DescriptionLogo" src={logo2}/>
+            <textarea className="CreateDescription"
+              placeholder="Description"
+              type="text"
+              value={description}
+              onChange={updateDescription}
+            />
+          </div>
+          </div>
+
+
           </div>
 
 
       </form>
+    </div>
+                <div className="SubmitCreateContainer">
+                    <button className="SubmitCreate" type="submit">Submit</button>
+                </div>
     </div>
     </>
   );

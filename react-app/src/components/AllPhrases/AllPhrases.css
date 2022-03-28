@@ -26,6 +26,10 @@
 
 }
 
+.PhraseTitle {
+    margin-bottom: 0px;
+}
+
 .active {
     background-color: #6ac1e6;
     padding: 5px;
@@ -52,10 +56,24 @@
 
 .CreateContainer {
     display: flex;
-    margin-top: 10%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
     text-decoration: none;
     color: black;
     margin-top: 0;
+    cursor: pointer;
+    background-color: #9AD0EC;
+    padding-bottom: 5%;
+}
+
+.CreateContainer:hover {
+    font-size: 150%;
+    width: 100%;
+}
+
+.PhraseTitle {
+    margin-top: 0px;
 }
 
 .APhrase:hover {
@@ -110,8 +128,8 @@
 .linebreak {
     border-color: black;
     border-width: .1px;
-    width: 90%;
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 15px;
 }
 
 .OuterWeekPhraseContainer {
@@ -121,6 +139,7 @@
     justify-content: center;
     background-color: #f7f7f7;
     border-radius: 5px;
+    padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
