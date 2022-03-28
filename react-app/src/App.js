@@ -40,24 +40,29 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route path='/home'>
+        <Route path='/' exact={true}>
           <Labels />
-            <Route path='/home/about' exact={true}>
-              <About />
-            </Route>
-            <Route path='/home/importance' exact={true}>
-              <Importance />
-            </Route>
-            <Route path='/home/learn' exact={true}>
-              <Learn />
-            </Route>
           <AllPhrases />
         </Route>
-
-
+                    <Route path='/about' >
+                    <Labels />
+                    <About />
+                    <AllPhrases />
+            </Route>
+            <Route path='/importance' >
+            <Labels />
+              <Importance />
+              <AllPhrases />
+            </Route>
+            <Route path='/learn' exact={true}>
+            <Labels />
+              <Learn />
+              <AllPhrases />
+            </Route>
         <ProtectedRoute path='/phrases/new' exact={true}>
         <Route path='/phrases/new' exact={true}>
           <CreateNewPhrase />
+        {/* <AllPhrases /> */}
         </Route>
         </ProtectedRoute>
         <Route path='/phrases/:phraseId' exact={true}>
