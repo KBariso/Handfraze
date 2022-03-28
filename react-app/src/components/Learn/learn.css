@@ -5,6 +5,8 @@
     border-radius: 3px;
     margin-left: 25%;
     margin-right: 25%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .secondTabContainer {
@@ -13,4 +15,36 @@
     border-radius: 5px;
     margin: 0;
     padding: 0;
+}
+
+.LearnContent {
+    width: 50%;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.MarthasVineyard {
+    display: inline;
+    width: 100%;
+    margin-top: 6%;
+}
+
+.LearnPic2 {
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.Citation {
+    font-size: small;
+    font-style: italic;
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 15%;
+}
+
+.SignNotOnlyHands {
+    width: 60%;
+    height: 80%;
 }

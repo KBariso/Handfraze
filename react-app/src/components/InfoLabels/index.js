@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import './InfoLabels.css'
 
 const Labels = () => {
     return (
@@ -7,14 +8,14 @@ const Labels = () => {
             <div className="AboutContainer">
                 <div className="AboutInnerContainer">
                 <div className="InfoChoices">
-                    <div className="About" >
-                        <NavLink to="/home/about"> About </NavLink>
+                    <div >
+                        <NavLink to="/home/about" className="About"> About </NavLink>
                     </div>
                     <div className="ImportanceASL">
-                        <NavLink to="/home/importance"> Importance </NavLink>
+                        <NavLink to="/home/importance" className="Importance" > Importance </NavLink>
                     </div>
                     <div className="WhyLearn">
-                        <NavLink to="/home/learn"> Learn </NavLink>
+                        <NavLink to="/home/learn" className="Learn"> Learn </NavLink>
                     </div>
                 </div>
                 <hr className="linebreak"/>
