@@ -9,13 +9,13 @@ const Labels = () => {
                 <div className="AboutInnerContainer">
                 <div className="InfoChoices">
                     <div >
-                        <NavLink to="/about" className="About"> About </NavLink>
+                        <NavLink to="/about" className="arrow About"> About <i class="arrow down"></i></NavLink>
                     </div>
                     <div className="ImportanceASL">
-                        <NavLink to="/importance" className="Importance" > Importance </NavLink>
+                        <NavLink to="/importance" className="arrow Importance"> Importance <i class="arrow down"></i></NavLink>
                     </div>
                     <div className="WhyLearn">
-                        <NavLink to="/learn" className="Learn"> Learn </NavLink>
+                        <NavLink to="/learn" className="arrow Learn"> Learn <i class="arrow down"></i></NavLink>
                     </div>
                 </div>
                 <hr className="linebreak"/>

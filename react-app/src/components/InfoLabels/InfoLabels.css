@@ -1,22 +1,66 @@
 .About {
     text-decoration-line: none;
     font-weight: bold;
-    font-size: larger;
+    font-size: large;
     color: #000000;
     margin-right: 5px;
+    background-color: none;
+}
+
+.About.arrow:hover {
+    font-size: larger;
+}
+
+.About.active {
+    padding: 10px;
+    border-radius: 0px;
+    width: fit-content;
+}
+
+.Importance.active {
+    padding: 10px;
+    border-radius: 0px;
+    width: fit-content;
+
 }
 
 .Importance {
     text-decoration-line: none;
     font-weight: bold;
-    font-size: larger;
+    font-size: large;
     color: #000000;
     margin-right: 5px;
+}
+
+.Importance.arrow:hover {
+    font-size: larger;
+}
+
+.Learn.active {
+    padding: 10px;
+    border-radius: 0px;
+    width: fit-content;
 }
 
 .Learn {
     text-decoration-line: none;
     font-weight: bold;
-    font-size: larger;
+    font-size: large;
     color: #000000
 }
+
+.Learn.arrow:hover {
+    font-size: larger;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
