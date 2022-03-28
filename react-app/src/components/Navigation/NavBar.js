@@ -17,7 +17,7 @@ const NavBar = () => {
     sessionLinks = (
       <>
                 <div className="nav-bar-container-light">
-        <NavLink to='/home/about' exact={true} activeClassName='HandfrazeLogo'>
+        <NavLink to='/' exact={true} activeClassName='HandfrazeLogo'>
           <img
             src={logo}
             className="website-logo"
@@ -32,7 +32,7 @@ const NavBar = () => {
     sessionLinks = (
       <nav>
                 <div className="nav-bar-container-light">
-        <NavLink to='/home/about' exact={true} activeClassName='HandfrazeLogo'>
+        <NavLink to='/' exact={true} activeClassName='HandfrazeLogo'>
           <img
             src={logo}
             className="website-logo"

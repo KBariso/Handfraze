@@ -110,7 +110,7 @@ const EditPhrase = ({phraseProp, hideForm}) => {
         let deletedPhrase = await dispatch(deleteOnePhrase(phraseId))
 
         if (!deletedPhrase) {
-            history.push('/home')
+            history.push('/')
             window.location.reload();
             // dispatch(getAllCategories());
         }
