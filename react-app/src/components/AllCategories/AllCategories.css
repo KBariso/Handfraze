@@ -10,6 +10,16 @@
 }
 
 
+@media screen and (max-width: 992px) {
+    .CategoriesandPhrasesContainer {
+        /* display: flex; */
+      /* flex-direction: column; */
+      width: 51%;
+      /* justify-self: center; */
+    }
+  }
+
+
 .CategoryContainer {
     display: flex inline-flex;
     flex-direction: column;

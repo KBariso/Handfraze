@@ -111,6 +111,13 @@
     margin-right: 24%;
 }
 
+@media screen and (max-width: 992px) {
+    .HomepageContainer {
+      flex-direction: column;
+    }
+  }
+
+
 .WeekPhraseContainer {
     display: flex;
     flex-direction: column;
@@ -145,6 +152,15 @@
     padding-bottom: 15px;
     width:45%
 }
+
+@media screen and (max-width: 992px) {
+    .HomepageContainer {
+        /* display: flex; */
+      flex-direction: column;
+      width: 100%;
+      justify-self: center;
+    }
+  }
 
 .PhraseNameLink {
     text-decoration: none;

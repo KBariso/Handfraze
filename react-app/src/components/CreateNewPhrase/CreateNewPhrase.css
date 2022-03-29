@@ -1,6 +1,18 @@
+.InputsandSubmit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .formContainer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.twodivs {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .CreateLogoContainer {
@@ -105,7 +117,7 @@
 }
 
 .SubmitCreateContainer {
-    width: 175%;
+    width: 100%;
     display: flex;
     justify-content: center;
 
@@ -120,11 +132,7 @@
     /* justify-content: flex-end; */
 }
 
-.InputsandSubmit {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 .DescriptionLogo {
     width: 130%;

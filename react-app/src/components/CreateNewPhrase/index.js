@@ -100,6 +100,8 @@ const CreateNewPhrase = () => {
     <div className="AllInputsContainer">
 
       <form className="formContainer" onSubmit={handleSubmit}>
+        <div className="twodivs">
+
         <div className="PhraseInputsContainer">
           {errors.length > 0 && (
             <ul className="errors">
@@ -151,13 +153,14 @@ const CreateNewPhrase = () => {
 
 
           </div>
+        </div>
 
 
-      </form>
-    </div>
                 <div className="SubmitCreateContainer">
                     <button className="SubmitCreate" type="submit">Submit</button>
                 </div>
+      </form>
+    </div>
     </div>
     </>
   );
