@@ -1,7 +1,7 @@
 .tabcontent2 {
     margin-bottom: 10px;
     background-color: #9AD0EC;
-    padding: 5px;
+    padding: 10px;
     border-radius: 3px;
     margin-left: 25%;
     margin-right: 25%;
@@ -20,15 +20,15 @@
 
 .LearnContent {
     width: 50%;
-    margin-top: 2%;
+    /* margin-top: 2%; */
     margin-right: 2%;
-    
+
 }
 
 .MarthasVineyard {
     display: inline;
     width: 100%;
-    margin-top: 6%;
+    /* margin-top: 6%; */
 }
 
 .LearnPic2 {

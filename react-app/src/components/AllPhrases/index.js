@@ -41,7 +41,7 @@ const AllPhrases = () => {
       )}
                     <div className="WeekPhraseContainer">
                         <h2 className="WeekPhrase">Phrase of the Week</h2>
-                        <iframe width="360" height="240" src="https://www.youtube.com/embed/Hs6n3cgOSh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe className="PhraseWeekVid" width="360" height="240" src="https://www.youtube.com/embed/Hs6n3cgOSh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <h3>Learn how to sign: Thank you</h3>
                     </div>
 

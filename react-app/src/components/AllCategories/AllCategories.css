@@ -14,7 +14,7 @@
     .CategoriesandPhrasesContainer {
         /* display: flex; */
       /* flex-direction: column; */
-      width: 51%;
+      width: 50%;
       /* justify-self: center; */
     }
   }
@@ -53,7 +53,8 @@
 
 .PhrasesHeader {
     display: flex;
-    position: flex;
+    /* position: flex; */
+    justify-content: center;
     margin-bottom: 0;
     padding-left: 5px;
 }
