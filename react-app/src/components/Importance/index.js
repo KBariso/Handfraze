@@ -14,7 +14,7 @@ const Importance = () => {
                             <div className='sideContentContainer'>
                             <p className='ImportanceSideContent'>ASL is a great way to communicate in a rich, meaningful way. It’s also the best way to develop awareness and sensitivity to the Deaf culture, a community of non-hearing individuals which number more than one million in the United States alone.</p>
                             <ul>
-                                <li> <b>Educators -</b> Today more than ever it’s common for educators to have children who are deaf or hard of hearing in their classroom. Many opt to learn ASL for this reason alone; however, others decide to become certified to teach ASL in the public schools. Educators with ASL teacher certification are qualified to teach ASL to both hearing and deaf students.</li>
+                                <li className='educators'> <b>Educators -</b> Today more than ever it’s common for educators to have children who are deaf or hard of hearing in their classroom. Many opt to learn ASL for this reason alone; however, others decide to become certified to teach ASL in the public schools. Educators with ASL teacher certification are qualified to teach ASL to both hearing and deaf students.</li>
                             </ul>
                             </div>
                             </div>
