@@ -27,8 +27,7 @@ const Learn = () => {
                         className="SignNotOnlyHands"
                         alt="SignNotOnlyHands"
                             />
-                            <p>
-                        <ul>
+                            <ul>
                             <li>
                             Hands: The hands are presented according to a handshape, a movement, an orientation, a location and are associated with a non-manual expression (face and body): they are their phonemes.
                             </li>
@@ -36,6 +35,14 @@ const Learn = () => {
                             <li>
                             Facial Expression: Provide information or modify the meaning of a sign: movement of the head, eyebrows, look, cheeks, mouth and tongue.
                             </li>
+                            </ul>
+                    </div>
+                    <div>
+
+                    </div>
+                            <p className='LearnPoint'>
+                        <ul>
+
                             <br />
                             <li>
                             Body Movements: The inclination, position of the body and shoulders are essential to express roles or the type of sentence (interrogative, exclamatory, doubtful, etc.).
@@ -47,7 +54,7 @@ const Learn = () => {
                         </ul>
                         <p className='Citation'>Emilio Ferreiro 2019, Unusualverse, accessed March 2022, https://www.unusualverse.com/2019/09/infographic-sign-language-rights-for-all.html</p>
             </p>
-                    </div>
+
         </>
     )
 }

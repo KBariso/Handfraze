@@ -8,6 +8,12 @@
     display: flex;
     justify-content: space-around;
 }
+@media screen and (max-width: 1280px) {
+    .tabcontent2 {
+      width: 75%;
+      margin-left: 10%;
+    }
+}
 
 .secondTabContainer {
     background-color: #9AD0EC;
@@ -35,14 +41,24 @@
     margin-left: 25%;
     margin-right: 25%;
     display: flex;
+}
+
+.LearnPoint {
+    margin-left: 25%;
+    margin-right: 25%;
+    display: flex;
     margin-bottom: 2%;
+    margin-top: 0px;
 }
 
 .Citation {
     font-size: small;
     font-style: italic;
     width: 50%;
-    margin-top: 5%;
+    position: relative;
+    text-align:end;
+    /* align-content: flex-end; */
+    margin-top: 10%;
     margin-left: 15%;
 }
 
@@ -50,3 +66,43 @@
     width: 60%;
     height: 80%;
 }
+
+@media screen and (max-width: 1280px) {
+    .SignNotOnlyHands {
+      width: 90%;
+      /* height:75%; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+@media screen and (max-width: 1280px) {
+    .LearnPic2 {
+        /* display: flex; */
+      flex-direction: column;
+      width: 55%;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .LearnPoint {
+        /* display: flex; */
+      margin-top: 0px;
+      flex-direction: column;
+      width: 60%;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .Citation {
+        /* display: flex; */
+      flex-direction: column;
+      width: fit-content;
+      align-items: center;
+      text-align: end;
+
+    }
+  }

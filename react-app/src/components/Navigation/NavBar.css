@@ -58,3 +58,17 @@ active.HandfrazeLogo {
     border-bottom-width: 2px;
     height: 60px;
   }
+
+  @media screen and (max-width: 992px) {
+    .nav-bar-container-light {
+      width: fit-content;
+      /* margin-left: 10%; */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    active.HandfrazeLogo {
+      width: 50%;
+      /* margin-left: 10%; */
+    }
+}

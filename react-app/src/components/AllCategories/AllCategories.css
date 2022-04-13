@@ -12,12 +12,9 @@
 
 @media screen and (max-width: 992px) {
     .CategoriesandPhrasesContainer {
-        /* display: flex; */
-      /* flex-direction: column; */
-      width: 50%;
-      /* justify-self: center; */
+      width: 150%;
     }
-  }
+}
 
 
 .CategoryContainer {
