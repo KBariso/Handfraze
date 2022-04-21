@@ -14,12 +14,12 @@ const CreateNewPhrase = () => {
   const history = useHistory();
   const user = useSelector((state) => state.session.user?.id);
   const userId = user;
-//   console.log(userId)
+
 
   const categoriesObj = useSelector((state) => state.categories);
-  console.log(categoriesObj);
+
   const categories = Object.values(categoriesObj);
-  // console.log(categories[0].id);
+
 
   useEffect(() => {
     dispatch(getAllCategories());
@@ -84,7 +84,7 @@ const CreateNewPhrase = () => {
         window.location.reload()
       }
     }
-    // console.log(createPhrase)
+
 
     }
   };

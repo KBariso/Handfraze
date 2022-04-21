@@ -12,27 +12,22 @@ const EditPhrase = ({phraseProp, hideForm}) => {
     const dispatch = useDispatch();
     const history = useHistory()
     const { phraseId } = useParams()
-    console.log(phraseId, "I AM THE PHRASEID!!!!!!!!!")
-    console.log(phraseProp.category_id, "I AM THE PHRASEPROP!!!!")
+
 
     const categoriesObj = useSelector((state) => state.categories);
-    console.log(categoriesObj[phraseProp.category_id]);
+
     const categories = Object.values(categoriesObj);
 
     const userCat = categories.filter(category => category !== categoriesObj[phraseProp.category_id])
     const userCatChoice = categories.filter(category => category === categoriesObj[phraseProp.category_id])
-    console.log(userCat)
-    console.log(categories)
-    console.log(userCatChoice)
 
 
-    // categoriesObj[phraseProp.category_id].title
+
+
 
     const user = useSelector(state => state.session.user);
     const userId = user?.id
 
-    // const phraseObj = useSelector(state => state.phrases)
-    // console.log(phraseObj.category_id)
 
     useEffect(() => {
         dispatch(getAllCategories());
@@ -46,7 +41,6 @@ const EditPhrase = ({phraseProp, hideForm}) => {
             setDescription(phraseProp.description)
             setMedia(phraseProp.media_url)
             setCategory([phraseProp?.category_id])
-            console.log("NOW HERE")
         }
     }, [phraseProp])
 

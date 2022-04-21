@@ -11,8 +11,6 @@ const EditComment = ({ phraseProp, hideForm }) => {
   const history = useHistory();
   const { phraseId } = useParams();
   const commentId = phraseProp.id;
-  console.log(commentId);
-  console.log(phraseProp.user_id, "I AM HEREEEE!!!!");
 
   const user = useSelector((state) => state.session.user);
   const userId = user?.id;

@@ -7,8 +7,6 @@ import './AllPhraseComments.css'
 
 const PhraseComments = ({phraseId, hideForm}) => {
     const dispatch = useDispatch();
-    // console.log(phraseId)
-
 
 
     useEffect(() => {
@@ -23,19 +21,18 @@ const PhraseComments = ({phraseId, hideForm}) => {
 
 
     const comments = useSelector((state) => {
-        // console.log(state.comments, "HELLLOOOOO")
+
        const commentArray = Object.values(state.comments);
-    //    console.log(commentArray)
-    //    console.log(commentArray.content)
+
        const onlyPhraseComments = commentArray.filter(comment=> comment.phrase_id == phraseId)
-    //    console.log(onlyPhraseComments)
+
 
        if(onlyPhraseComments){
-        //  hideForm()
+
          return onlyPhraseComments
        }
       });
-    //   console.log(comments)
+
 
     let sessionLinks;
 
