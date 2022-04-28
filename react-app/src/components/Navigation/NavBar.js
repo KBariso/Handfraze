@@ -24,6 +24,17 @@ const NavBar = () => {
             alt="website logo"
           />
         </NavLink>
+                <div className="InfoChoices">
+                    <div >
+                        <NavLink to="/about" className="arrow About"> About </NavLink>
+                    </div>
+                    <div className="ImportanceASL">
+                        <NavLink to="/importance" className="arrow Importance"> Importance </NavLink>
+                    </div>
+                    <div className="WhyLearn">
+                        <NavLink to="/learn" className="arrow Learn"> Learn </NavLink>
+                    </div>
+                </div>
         <LogoutButton />
         </div>
       </>
@@ -39,6 +50,21 @@ const NavBar = () => {
             alt="website logo"
           />
         </NavLink>
+        <div className="AboutContainer">
+                <div className="AboutInnerContainer">
+                <div className="InfoChoices">
+                    <div >
+                        <NavLink to="/about" className="arrow About"> About </NavLink>
+                    </div>
+                    <div className="ImportanceASL">
+                        <NavLink to="/importance" className="arrow Importance"> Importance </NavLink>
+                    </div>
+                    <div className="WhyLearn">
+                        <NavLink to="/learn" className="arrow Learn"> Learn </NavLink>
+                    </div>
+                </div>
+                </div>
+            </div>
         <div className="SignupLogout" >
           <div className='SignUpFormModalContainer'>
             <SignupFormModal />

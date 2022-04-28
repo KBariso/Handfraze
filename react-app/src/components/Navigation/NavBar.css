@@ -72,3 +72,70 @@ active.HandfrazeLogo {
       /* margin-left: 10%; */
     }
 }
+
+.InfoChoices {
+    display: flex;
+    padding-top: 5px;
+
+}
+
+.About {
+    text-decoration-line: none;
+    color: #000000;
+    margin-right: 5px;
+    background-color: none;
+}
+
+.About:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
+.About.active {
+    background-color: inherit;
+    font-weight:lighter;
+}
+
+.Importance.active {
+    background-color: inherit;
+    font-weight:lighter;
+
+}
+
+.Importance {
+    text-decoration-line: none;
+    color: #000000;
+    margin-right: 5px;
+}
+
+.Importance:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
+.Learn.active {
+    background-color: inherit;
+    font-weight:lighter;
+}
+
+.Learn {
+    text-decoration-line: none;
+    color: #000000
+}
+
+.Learn:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
+/* .arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+} */
+
+/* .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  } */

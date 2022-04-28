@@ -1,3 +1,24 @@
+/* .AboutContainer {
+    justify-self: center;
+    padding-top: 1%;
+    padding-bottom: 10px;
+
+} */
+
+/* .AboutInnerContainer {
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+} */
+
+
+/*
+.InfoChoices {
+    display: flex;
+    padding-top: 5px;
+
+}
+
 .About {
     text-decoration-line: none;
     font-weight: bold;
@@ -7,20 +28,26 @@
     background-color: none;
 }
 
-.About.arrow:hover {
+.About:hover {
     font-size: larger;
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
 }
 
 .About.active {
     padding: 10px;
     border-radius: 0px;
     width: fit-content;
+    background-color: inherit;
+    font-weight:lighter;
 }
 
 .Importance.active {
     padding: 10px;
     border-radius: 0px;
     width: fit-content;
+    background-color: inherit;
+    font-weight:lighter;
 
 }
 
@@ -32,14 +59,18 @@
     margin-right: 5px;
 }
 
-.Importance.arrow:hover {
+.Importance:hover {
     font-size: larger;
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
 }
 
 .Learn.active {
     padding: 10px;
     border-radius: 0px;
     width: fit-content;
+    background-color: inherit;
+    font-weight:lighter;
 }
 
 .Learn {
@@ -49,18 +80,20 @@
     color: #000000
 }
 
-.Learn.arrow:hover {
+.Learn:hover {
     font-size: larger;
-}
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+} */
 
-.arrow {
+/* .arrow {
   border: solid black;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
-}
+} */
 
-.down {
+/* .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-  }
+  } */
