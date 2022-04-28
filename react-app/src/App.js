@@ -17,6 +17,7 @@ import PhraseComments from './components/AllPhraseComments';
 import About from './components/About';
 import Importance from './components/Importance';
 import Learn from './components/Learn';
+import Home from './components/Home';
 // import Labels from './components/InfoLabels';
 
 import './index.css'
@@ -42,6 +43,7 @@ function App() {
       <Switch>
         <Route path='/' exact={true}>
           {/* <Labels /> */}
+          <Home />
           <AllPhrases />
         </Route>
                     <Route path='/about' >

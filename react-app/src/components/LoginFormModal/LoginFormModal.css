@@ -10,11 +10,11 @@
     padding-bottom: 15px;
 }
 .LoginHomePage {
-    margin-left: 10px;
-    background-color: #232423; /* Green */
+    /* margin-left: 10px; */
+    /* background-color: #232423;  */
     border: none;
-    color: white;
-    padding: 10px 20px;
+    /* color: white; */
+    /* padding: 10px 20px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -23,10 +23,10 @@
 }
 
 
-.LoginHomePage:hover {
+/* .LoginHomePage:hover {
     background-color: white;
     color:#232423
-}
+} */
 
 
 .ModalLoginSubmit {

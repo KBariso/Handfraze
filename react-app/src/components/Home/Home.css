@@ -1,0 +1,10 @@
+.HomeBigPicContainer {
+    width: 100%;
+}
+
+.HomeBigPic {
+    /* height: 600px; */
+    background: url("./images/ASL-cover-image.jpg");
+    width: 100%;
+    height: 600px;
+}

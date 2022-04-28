@@ -41,8 +41,19 @@ const NavBar = () => {
     )
   } else {
     sessionLinks = (
+      <>
+          <div className="SignupLogout" >
+          <div className='SignUpFormModalContainer'>
+            <SignupFormModal />
+          </div>
+          <div>
+            <LoginFormModal />
+          </div>
+
+      </div>
       <nav>
-                <div className="nav-bar-container-light">
+
+        <div className="nav-bar">
         <NavLink to='/' exact={true} activeClassName='HandfrazeLogo'>
           <img
             src={logo}
@@ -51,8 +62,12 @@ const NavBar = () => {
           />
         </NavLink>
         <div className="AboutContainer">
+
                 <div className="AboutInnerContainer">
                 <div className="InfoChoices">
+                    <div>
+                    <NavLink to="/" className="arrow Home"> Home </NavLink>
+                      </div>
                     <div >
                         <NavLink to="/about" className="arrow About"> About </NavLink>
                     </div>
@@ -62,10 +77,13 @@ const NavBar = () => {
                     <div className="WhyLearn">
                         <NavLink to="/learn" className="arrow Learn"> Learn </NavLink>
                     </div>
+                    <div>
+                    <NavLink to="/" className="arrow Contact"> Contact </NavLink>
+                      </div>
                 </div>
                 </div>
             </div>
-        <div className="SignupLogout" >
+        {/* <div className="SignupLogout" >
           <div className='SignUpFormModalContainer'>
             <SignupFormModal />
           </div>
@@ -73,9 +91,10 @@ const NavBar = () => {
             <LoginFormModal />
           </div>
 
+      </div> */}
         </div>
-      </div>
   </nav>
+      </>
     )
   }
   return (

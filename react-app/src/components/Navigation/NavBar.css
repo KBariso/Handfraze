@@ -33,10 +33,14 @@ active.HandfrazeLogo {
 }
 
 .SignupLogout {
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    padding-right: 20%;
+    padding-top: 15px;
+    justify-content:flex-end;
+    width: auto;
+
 }
 
 
@@ -45,14 +49,14 @@ active.HandfrazeLogo {
 }
 
 
-.nav-bar-container-light {
+.nav-bar {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: auto;
     padding: 15px;
-    background-color: #f7f7f7;
+    background: transparent;
     border-bottom-style: solid;
     border-bottom-color: #f7f7f7;
     border-bottom-width: 2px;
@@ -62,21 +66,21 @@ active.HandfrazeLogo {
   @media screen and (max-width: 992px) {
     .nav-bar-container-light {
       width: fit-content;
-      /* margin-left: 10%; */
     }
 }
 
 @media screen and (max-width: 992px) {
     active.HandfrazeLogo {
       width: 50%;
-      /* margin-left: 10%; */
     }
 }
 
 .InfoChoices {
     display: flex;
+    justify-content: space-evenly;
     padding-top: 5px;
-
+    width: 500px;
+    padding-left: 50px;
 }
 
 .About {
