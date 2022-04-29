@@ -26,13 +26,13 @@ const NavBar = () => {
         </NavLink>
                 <div className="InfoChoices">
                     <div >
-                        <NavLink to="/about" className="arrow About"> About </NavLink>
+                        <NavLink to="/about" className="About"> About </NavLink>
                     </div>
                     <div className="ImportanceASL">
-                        <NavLink to="/importance" className="arrow Importance"> Importance </NavLink>
+                        <NavLink to="/importance" className="Importance"> Importance </NavLink>
                     </div>
                     <div className="WhyLearn">
-                        <NavLink to="/learn" className="arrow Learn"> Learn </NavLink>
+                        <NavLink to="/learn" className="Learn"> Learn </NavLink>
                     </div>
                 </div>
         <LogoutButton />

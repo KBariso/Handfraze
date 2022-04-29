@@ -119,7 +119,7 @@ active.HandfrazeLogo {
 
 .Learn.active {
     background-color: inherit;
-    font-weight:lighter;
+    /* font-weight:lighter; */
 }
 
 .Learn {
@@ -134,7 +134,7 @@ active.HandfrazeLogo {
 
 .Home.active {
     background-color: inherit;
-    font-weight:lighter;
+    /* font-weight:lighter; */
 }
 
 .Home {
@@ -149,7 +149,7 @@ active.HandfrazeLogo {
 
 .Contact.active {
     background-color: inherit;
-    font-weight:lighter;
+    /* font-weight:lighter; */
 }
 
 .Contact {

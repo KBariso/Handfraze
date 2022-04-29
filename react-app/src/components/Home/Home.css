@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
+
 .HomeBigPicContainer {
     width: 100%;
 
@@ -10,13 +14,57 @@
     background: url("./images/ASL-cover-image.jpg") center;
     width: 100%;
     height: 550px;
+    display: flex;
+    justify-content: center;
 }
 
 .WelcomeHandfraze {
     font-size: larger;
     /* fo */
     display: flex;
+    width: 95%;
     flex-direction: column;
     align-items: center;
-    padding-top: 75px;
+    padding-top: 25px;
+}
+
+.linebreak {
+    border-color: #000;
+    border-width: 0.1px;
+    width: 20%;
+    margin-top: 15px;
+}
+
+
+.Description1Container {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.Desc1Size {
+    width: 50%;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+}
+
+.Description1 {
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    /* align-items: center; */
+}
+
+
+.Desc1Header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-bottom: 0px;
+}
+
+.SmallDesc1 {
+    width: 80%;
+    margin-top: 0px;
 }
