@@ -132,6 +132,36 @@ active.HandfrazeLogo {
     transition: all 0.3s ease-in-out;
 }
 
+.Home.active {
+    background-color: inherit;
+    font-weight:lighter;
+}
+
+.Home {
+    text-decoration-line: none;
+    color: #000000
+}
+
+.Home:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
+.Contact.active {
+    background-color: inherit;
+    font-weight:lighter;
+}
+
+.Contact {
+    text-decoration-line: none;
+    color: #000000
+}
+
+.Contact:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
 /* .arrow {
   border: solid black;
   border-width: 0 2px 2px 0;
