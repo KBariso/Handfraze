@@ -37,14 +37,14 @@
 
 
 .Description1Container {
-    min-width: 100%;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding-top: 50px;
 }
 
 .Desc1Size {
-    width: 50%;
+    width: 55%;
     display: flex;
     /* flex-direction: row; */
     justify-content: space-evenly;

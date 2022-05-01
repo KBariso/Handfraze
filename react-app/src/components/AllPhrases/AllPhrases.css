@@ -60,6 +60,11 @@
     margin-top: 0px;
 }
 
+.PhraseTitle:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
 .APhrase:hover {
     background-color: #82c1df;
     font-size: larger;

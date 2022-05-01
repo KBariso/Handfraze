@@ -64,7 +64,7 @@ const SignUpForm = () => {
     const email = "demo@aa.io";
     const password = "password";
     dispatch(login(email, password));
-    history.push("/about")
+    history.push("/")
   }
 
   const updateUsername = (e) => {
