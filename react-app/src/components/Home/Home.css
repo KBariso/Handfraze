@@ -68,3 +68,80 @@
     width: 80%;
     margin-top: 0px;
 }
+
+.PopularHeaderContainer {
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.PopularHeader {
+    display: flex;
+    width: 57%;
+    /* : center; */
+
+}
+
+.PopularPhraseSize {
+    /* background-color: #000; */
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.PopularPhraseContainer {
+    width: 60%;
+    display: flex;
+    /* justify-self: center; */
+    /* justify-items: center; */
+    justify-content: space-evenly;
+}
+
+.WeekPhraseSize {
+    height: 400px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #EEDDCB;
+}
+
+.WeekPhraseContainer {
+    background-color: #EEDDCB;
+    height: 100%;
+    width: 100%;
+}
+
+.PopularPhrase1 {
+    background-color: #E48974;
+    height: 100%;
+    width: 30%;
+}
+
+.PopularPhrase2 {
+    background-color: #E8983E;
+    height: 100%;
+    width: 30%;
+}
+
+.PopularPhrase3 {
+    background-color: #A77D92;
+    height: 100%;
+    width: 30%;
+}
+
+.box {
+    text-align: center;
+}
+
+.PhraseWeekVid {
+    width: 90%;
+    height: 70%;
+}
+
+.PhraseVid {
+    width: 90%;
+    height: 70%;
+}

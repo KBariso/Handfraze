@@ -16,7 +16,7 @@ const NavBar = () => {
   if (user) {
     sessionLinks = (
       <>
-                <div className="nav-bar-container-light">
+                <div className="nav-bar">
         <NavLink to='/' exact={true} activeClassName='HandfrazeLogo'>
           <img
             src={logo}

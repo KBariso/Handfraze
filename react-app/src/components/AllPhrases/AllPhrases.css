@@ -102,7 +102,7 @@
   }
 
 
-.WeekPhraseContainer {
+/* .WeekPhraseContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,10 +111,9 @@
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    /* border: solid 1px black; */
     width:fit-content;
     height:fit-content;
-}
+} */
 
 
 
