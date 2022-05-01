@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
+
+.HomeBigPicContainer {
+    width: 100%;
+
+
+}
+
+.HomeBigPic {
+    /* width: 100%; */
+    /* height: 600px; */
+    background: url("./images/ASL-cover-image.jpg") center;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+}
+
+.WelcomeHandfraze {
+    font-size: larger;
+    /* fo */
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.linebreak {
+    border-color: #000;
+    border-width: 0.1px;
+    width: 20%;
+    margin-top: 15px;
+}
+
+
+.Description1Container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.Desc1Size {
+    width: 55%;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+}
+
+.Description1 {
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    /* align-items: center; */
+}
+
+
+.Desc1Header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-bottom: 0px;
+}
+
+.SmallDesc1 {
+    width: 80%;
+    margin-top: 0px;
+}
+
+.PopularHeaderContainer {
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.PopularHeader {
+    display: flex;
+    width: 57%;
+    /* : center; */
+
+}
+
+.PopularPhraseSize {
+    /* background-color: #000; */
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.PopularPhraseContainer {
+    width: 60%;
+    display: flex;
+    /* justify-self: center; */
+    /* justify-items: center; */
+    justify-content: space-evenly;
+}
+
+.WeekPhraseSize {
+    height: 400px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: #EEDDCB;
+}
+
+.WeekPhraseContainer {
+    background-color: #EEDDCB;
+    height: 100%;
+    width: 100%;
+}
+
+.PopularPhrase1 {
+    background-color: #E48974;
+    height: 100%;
+    width: 30%;
+}
+
+.PopularPhrase2 {
+    background-color: #E8983E;
+    height: 100%;
+    width: 30%;
+}
+
+.PopularPhrase3 {
+    background-color: #A77D92;
+    height: 100%;
+    width: 30%;
+}
+
+.box {
+    text-align: center;
+}
+
+.PhraseWeekVid {
+    width: 90%;
+    height: 70%;
+}
+
+.PhraseVid {
+    width: 90%;
+    height: 70%;
+}

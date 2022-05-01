@@ -33,10 +33,14 @@ active.HandfrazeLogo {
 }
 
 .SignupLogout {
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    padding-right: 20%;
+    padding-top: 15px;
+    justify-content:flex-end;
+    width: auto;
+
 }
 
 
@@ -45,14 +49,14 @@ active.HandfrazeLogo {
 }
 
 
-.nav-bar-container-light {
+.nav-bar {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: auto;
     padding: 15px;
-    background-color: #f7f7f7;
+    background: transparent;
     border-bottom-style: solid;
     border-bottom-color: #f7f7f7;
     border-bottom-width: 2px;
@@ -62,13 +66,110 @@ active.HandfrazeLogo {
   @media screen and (max-width: 992px) {
     .nav-bar-container-light {
       width: fit-content;
-      /* margin-left: 10%; */
     }
 }
 
 @media screen and (max-width: 992px) {
     active.HandfrazeLogo {
       width: 50%;
-      /* margin-left: 10%; */
     }
 }
+
+.InfoChoices {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    width: 500px;
+    padding-left: 50px;
+}
+
+.About {
+    text-decoration-line: none;
+    color: #000000;
+    margin-right: 5px;
+    background-color: none;
+}
+
+.About:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
+.About.active {
+    background-color: inherit;
+    font-weight:lighter;
+}
+
+.Importance.active {
+    background-color: inherit;
+    font-weight:lighter;
+
+}
+
+.Importance {
+    text-decoration-line: none;
+    color: #000000;
+    margin-right: 5px;
+}
+
+.Importance:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
+.Learn.active {
+    background-color: inherit;
+    /* font-weight:lighter; */
+}
+
+.Learn {
+    text-decoration-line: none;
+    color: #000000
+}
+
+.Learn:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
+.Home.active {
+    background-color: inherit;
+    /* font-weight:lighter; */
+}
+
+.Home {
+    text-decoration-line: none;
+    color: #000000
+}
+
+.Home:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
+.Contact.active {
+    background-color: inherit;
+    /* font-weight:lighter; */
+}
+
+.Contact {
+    text-decoration-line: none;
+    color: #000000
+}
+
+.Contact:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
+}
+
+/* .arrow {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+} */
+
+/* .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  } */

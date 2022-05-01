@@ -17,7 +17,8 @@ import PhraseComments from './components/AllPhraseComments';
 import About from './components/About';
 import Importance from './components/Importance';
 import Learn from './components/Learn';
-import Labels from './components/InfoLabels';
+import Home from './components/Home';
+// import Labels from './components/InfoLabels';
 
 import './index.css'
 
@@ -41,21 +42,22 @@ function App() {
       <NavBar />
       <Switch>
         <Route path='/' exact={true}>
-          <Labels />
+          {/* <Labels /> */}
+          <Home />
           <AllPhrases />
         </Route>
                     <Route path='/about' >
-                    <Labels />
+                    {/* <Labels /> */}
                     <About />
                     <AllPhrases />
             </Route>
             <Route path='/importance' >
-            <Labels />
+            {/* <Labels /> */}
               <Importance />
               <AllPhrases />
             </Route>
             <Route path='/learn' exact={true}>
-            <Labels />
+            {/* <Labels /> */}
               <Learn />
               <AllPhrases />
             </Route>

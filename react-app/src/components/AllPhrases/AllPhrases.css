@@ -1,9 +1,3 @@
-.AboutContainer {
-    justify-self: center;
-    padding-top: 1%;
-    padding-bottom: 10px;
-
-}
 
 
 
@@ -14,17 +8,7 @@
 
 
 
-.AboutInnerContainer {
-    border-radius: 10px;
-    margin-left: 25%;
-    margin-right: 25%;
-}
 
-.InfoChoices {
-    display: flex;
-    padding-top: 5px;
-
-}
 
 .PhraseTitle {
     margin-bottom: 0px;
@@ -32,11 +16,11 @@
 
 .active {
     background-color: #6ac1e6;
-    padding: 5px;
-    border-radius: 5px;
+    /* padding: 5px;
+    border-radius: 5px; */
     cursor: pointer;
     width: 100%;
-    font-weight:bold;
+    /* font-weight:bold; */
 }
 
 
@@ -74,6 +58,11 @@
 
 .PhraseTitle {
     margin-top: 0px;
+}
+
+.PhraseTitle:hover {
+    color: #6ac1e6;
+    transition: all 0.3s ease-in-out;
 }
 
 .APhrase:hover {
@@ -118,7 +107,7 @@
   }
 
 
-.WeekPhraseContainer {
+/* .WeekPhraseContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,10 +116,9 @@
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
-    /* border: solid 1px black; */
     width:fit-content;
     height:fit-content;
-}
+} */
 
 
 

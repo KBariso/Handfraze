@@ -80,7 +80,7 @@ const CreateNewPhrase = () => {
     setDescription("")
     setMedia("")
       if (createdPhrase) {
-        history.push(`/about`);
+        history.push(`/`);
         window.location.reload()
       }
     }
