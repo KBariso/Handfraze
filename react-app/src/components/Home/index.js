@@ -39,15 +39,15 @@ const Home = () => {
                     <div className='PopularPhraseSize'>
                         <div className='PopularPhraseContainer'>
                             <div className='box PopularPhrase1'>
-                                <h2>Hello, my name is...</h2>
+                                <h2 className="PopPhraseName">Hello, my name is...</h2>
                                 <iframe className="PhraseWeekVid" src="https://www.youtube.com/embed/Hs6n3cgOSh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div className='box PopularPhrase2'>
-                                <h2>Alphabet A-Z</h2>
+                                <h2 className="PopPhraseName">Alphabet A-Z</h2>
                                 <iframe className="PhraseWeekVid" src="https://www.youtube.com/embed/wqmSKu9YcFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                             <div className='box PopularPhrase3'>
-                                <h2>Where is the restroom?</h2>
+                                <h2 className="PopPhraseName">Where is the restroom?</h2>
                                 <iframe className="PhraseWeekVid" src="https://www.youtube.com/embed/zD32gdBZqLQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
